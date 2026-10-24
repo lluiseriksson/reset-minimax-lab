@@ -36,6 +36,16 @@ The Holevo group retains **14 invalid finite ground-state KKT certificates among
 
 The root-authored `input*.md` sketches are included because the native scripts record their hashes; those hashes do not certify their mathematical claims. All code, sketches and outputs were produced with substantial AI assistance and a shared filesystem. Labels such as independent in historical script headers do not establish human or statistical independence. The new workflow must actually pass on each platform before cross-platform reproduction is claimed.
 
+## Unproved tensorization hypothesis
+
+`hypotheses/tensorization66/` preserves a conjectured overlap-sensitive output-entropy bound and an explicit counterexample to one proposed induction step. The complete conjecture is **unproved**. The candidate pointwise small-noise lemma is a separate analytical argument awaiting targeted audit; it is not a uniform-in-blocklength result.
+
+```powershell
+python verify_tensorization.py
+```
+
+This optional replay runs 3627 structured finite cases, 48 bounded local optimizations, 30 comparisons of two channel implementations, 12 small-noise diagnostics and 14 orthogonal-support controls. It copies the native programs to a fresh ignored `runs/` directory and verifies immutable source/output hashes. The preserved execution found no numerical violation below -2e-10; a local optimizer cannot certify a global minimum. Neither these tests nor a targeted lemma audit establish the full conjecture, regularized capacity, originality, or a manuscript score. Inputs are not restricted by the energy constraints of the main finite-game experiment; this is a separate channel-entropy exploration.
+
 ## Optional oscillator larger checks
 
 `continuum_check51.py` evaluates explicit continuum integrals and six larger finite grids (up to 327681 levels); the original output is `continuum-results51.json`. This can take several minutes per case and is excluded from default CI. It is a diagnostic of convergence, not its proof. Its formulas do not establish uniqueness of all optimizers or a physical phase transition.
