@@ -1,0 +1,74 @@
+Candidate lemma for audit — finite dimensions only — 2026-10-24
+Root-authored mathematical derivation with AI assistance. No originality claim,
+no assessment score, no general tensorization or capacity theorem claimed.
+
+Definitions
+Let psi=|v><v| be a fixed pure state on (C^d)^tensor n, with marginals psi_i.
+Let tau be a fixed density matrix on C^d. For q in [0,1], let
+R_q(rho)=(1-q)rho+q tau Tr rho. All entropies are in nats. Set
+
+ G(q)=S(R_q^tensor n(psi))-n[q S(tau)+h(q)]
+                               +sum_i h(q Tr(psi_i tau)).
+ Delta=sum_i Tr[tau(psi_i-psi_i^2)] >=0.
+
+Claim A (pointwise small-noise expansion)
+ G(q)=Delta q ln(1/q)+O(q) as q decreases to zero.
+Constants depend on n,d,psi,tau; there is no uniformity claim.
+
+Proof candidate
+Write E_i(psi)=tau_i tensor psi_[n]\{i}, with factors in their original order.
+The output has expansion
+ rho(q)=psi+q A+O(q^2), A=sum_i E_i(psi)-n psi.
+Let P=I-psi. On the zero-eigenvalue subspace, the first derivatives of the
+small eigenvalues are the nonnegative eigenvalues mu_j of P A P.
+Finite-dimensional analytic Hermitian perturbation gives analytic eigenvalue
+branches near zero. Branches with mu_j>0 contribute mu_j q ln(1/q)+O(q)
+to the entropy. Branches with mu_j=0 contribute O(q^2 ln(1/q)) or vanish;
+the eigenvalue near one contributes O(q). Hence
+
+ S(rho(q))=a q ln(1/q)+O(q),
+ a=Tr(P A P)=n-sum_i <v|E_i(psi)|v>.
+
+In a Schmidt decomposition across site i versus the other sites,
+ <v|E_i(psi)|v>=Tr(tau psi_i^2).
+For t_i=Tr(tau psi_i), h(q)=q ln(1/q)+O(q) and
+h(q t_i)=t_i q ln(1/q)+O(q), including t_i=0.
+Subtracting gives a-n+sum_i t_i=Delta, proving the expansion.
+Positivity of Delta follows from 0<=psi_i<=I.
+
+Claim B (the zero-coefficient case holds for every q)
+If Delta=0, then G(q)>=0 for all q in [0,1].
+
+Proof candidate
+Each summand Tr[tau psi_i(I-psi_i)] is nonnegative and must vanish.
+If psi_i is pure, the global pure state factors at that site. Separate
+all such sites F; the remaining pure factor is on sites E whose one-site
+marginals are mixed (rank at least two). For i in E the spectrum of psi_i
+on its support lies strictly between zero and one, so the kernel of
+psi_i(I-psi_i) equals ker psi_i. Positivity and zero trace imply that
+supp tau is a subspace of ker psi_i. Thus t_i=0 on E.
+
+For any retention pattern on E, a retained site has support within
+supp psi_i, while a replaced site has support within supp tau. These two
+subspaces are orthogonal. Distinct retention patterns therefore give
+orthogonal global output supports. Their mixture has exactly the entropy
+
+ |E|h(q)+|E|qS(tau)+E_T S(psi_T),
+
+which is at least |E|[h(q)+qS(tau)], the desired bound on E. The sites in F
+are independent pure-input factors; on each one the known single-use
+binary-Fano argument gives the required bound. Add output entropies of
+the F factors and the E block to obtain G(q)>=0. This includes E empty.
+
+Corollary candidate
+For every fixed finite-dimensional tuple (n,d,psi,tau), there exists q_0>0
+such that G(q)>=0 for all 0<=q<=q_0: if Delta>0 this follows from Claim A,
+and if Delta=0 from Claim B.
+
+Limits that must not be dropped
+This is a pointwise small-q assertion for a fixed tuple, not a uniform
+neighborhood over varying states, dimensions, blocklengths or resets.
+Counterexamples with q-dependent inputs or at intermediate noise are not
+excluded. No regularized capacity or energy-uniform theorem follows.
+The entropy perturbation argument and the Delta=0 support argument require
+independent audit before manuscript promotion. They may be known results.

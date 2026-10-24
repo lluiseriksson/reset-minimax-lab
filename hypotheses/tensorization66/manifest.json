@@ -1,0 +1,35 @@
+{
+  "scope": "Immutable exploratory inputs and outputs; no theorem certification",
+  "files": [
+    {
+      "path": "entropy-falsifier66.py",
+      "bytes": 6388,
+      "sha256": "c8de36f03d6cb086f4cda968496275bf8150f0a999944f7d4569afdf0c445398"
+    },
+    {
+      "path": "entropy-falsifier66-results.json",
+      "bytes": 2965215,
+      "sha256": "48168d763ab9736090c53ffef23f322aaf8936831a157edfab66257fd4c0ebf1"
+    },
+    {
+      "path": "small-noise-check66.py",
+      "bytes": 2720,
+      "sha256": "90f4ec1dc85f79d1e25305f89ad593fcdb37494dc19ab351ff228b255aa581d3"
+    },
+    {
+      "path": "small-noise-check66-results.json",
+      "bytes": 18838,
+      "sha256": "11882f47f6dc676f5738947e4ccd95f51e94d7d01170a28d8f7d55ab64f6d5f7"
+    },
+    {
+      "path": "tensorization-obstruction66.txt",
+      "bytes": 4913,
+      "sha256": "40fb1662e5e67f224def0eb884e07233d9b3441e37fb28022f5e29486c3cdc0c"
+    },
+    {
+      "path": "small-noise-lemma66.txt",
+      "bytes": 3554,
+      "sha256": "9e3b836f222936aa5646da007d442e22fa24e38c6bd8ef7fd751b97066b9bd6c"
+    }
+  ]
+}
