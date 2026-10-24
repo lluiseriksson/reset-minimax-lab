@@ -1,0 +1,314 @@
+TARGETED MATHEMATICAL AUDIT — CHECKPOINT 66
+Date: 2026-10-24
+Scope: Claims A and B and their pointwise small-noise corollary.
+
+VERDICT
+
+Claims A and B and the stated corollary are mathematically correct under
+the assumptions actually written: n and d finite and fixed, a fixed pure
+input psi, a fixed density matrix tau, and q approaching zero from above.
+I found no substantive gap or counterexample. The report below supplies
+explicit justifications for the two compressed steps most likely to hide
+a problem. These are clarifications, not additional hypotheses.
+
+This is a targeted AI audit dependent on the parent's task and candidate,
+not independent human review, formal verification, or a publication decision.
+No score, originality claim, proof of the all-q entangled conjecture, uniform
+neighborhood, or capacity conclusion is given. The numerical work is bounded
+and is not the basis for the universal mathematical verdict.
+
+INPUTS AND PROVENANCE
+
+1. C:\Trabajo\airr\2026-10-24_propuesta42a\small-noise-lemma66.txt
+   SHA256 9E3B836F222936AA5646DA007D442E22FA24E38C6BD8EF7FD751B97066B9BD6C
+2. C:\Trabajo\airr\2026-10-24_propuesta42a\tensorization-obstruction66.txt
+   SHA256 40FB1662E5E67F224DEF0EB884E07233D9B3441E37FB28022F5E29486C3CDC0C
+
+Exact byte copies are included with this report. This audit has not edited
+the source inputs or ESTADO.json. The parent's numerical programs and
+results were not read or reused; audit66.py was written separately. Its
+independence is implementation-level only, not an independent reviewer.
+
+A. ENTROPY PERTURBATION
+
+A1. Analytic family and its derivative
+
+The tensor channel output is a polynomial in the single real parameter q:
+
+ rho(q) = sum_T (1-q)^|T| q^(n-|T|)
+                 [psi_T tensor tau on the complement of T].
+
+It is Hermitian for every real q, including negative q in a neighborhood
+of zero. Positivity is needed only for physical q in [0,1]. Consequently,
+the open-neighborhood hypothesis of analytic Hermitian perturbation theory
+is satisfied even though rho(q) need not be a state at negative q. There
+is no requirement to analytically extend entropy itself across q=0.
+
+Differentiating the polynomial gives
+
+ rho(q) = psi + q A + O(q^2),
+ A = sum_i E_i(psi) - n psi,
+ E_i(psi) = tau at site i tensor psi on the complementary sites.
+
+All remainders here are in a matrix norm in the fixed finite-dimensional
+space. Put P=I-psi. Then PAP=sum_i P E_i(psi) P is positive semidefinite.
+
+A2. Degenerate zero eigenvalues
+
+Analytic Hermitian eigenvalue branches exist locally. For an analytic
+eigenpair (ell_j(q),u_j(q)) with ell_j(0)=0, differentiating the eigenvector
+equation and multiplying by P gives
+
+ PAP u_j(0) = ell'_j(0) u_j(0).
+
+The u_j(0) for these branches form an orthonormal basis of ran(P). Thus the
+derivatives are exactly the eigenvalues mu_j of PAP, including multiplicity,
+and mu_j>=0. This establishes the candidate's first-order identification;
+it does not assume the small eigenvalues remain simple.
+
+If mu_j>0, ell_j(q)=mu_j q+O(q^2), so
+
+ -ell_j(q) ln ell_j(q) = mu_j q ln(1/q) + O(q).
+
+If mu_j=0, analyticity gives ell_j(q)=O(q^2). On the physical side ell_j>=0.
+For sufficiently small q, monotonicity of -x ln x on [0,e^-1] then gives
+an O(q^2 ln(1/q)) bound. This includes branches of order three or higher,
+and branches identically zero. Zero derivative does NOT imply an identically
+zero branch; the candidate does not make that mistake. The explicit test
+|00><00| with reset |1><1| has a q^2 eigenvalue and checks this issue.
+
+The sole eigenvalue equal to one at q=0 contributes O(q). Therefore
+
+ S(rho(q)) = a q ln(1/q)+O(q),
+ a = Tr(PAP) = n - sum_i <v|E_i(psi)|v>.
+
+A3. Independent shorter derivation
+
+The leading entropy coefficient does not actually require analytic
+parameterizations of all the small eigenvalues. In the decomposition
+span(v) plus its orthogonal complement, rho(q) has block form
+
+ [ 1+q alpha+O(q^2)     O(q) ]
+ [       O(q)           O(q) ],     alpha=<v|A|v>.
+
+The isolated eigenvalue ell_*(q) near one is
+ell_*(q)=1+q alpha+O(q^2). For example, its lower block eigenvector is O(q)
+times its upper component because the lower block resolvent near one is
+bounded; substitution in the upper equation yields this formula.
+
+Let delta_mass=1-ell_*(q)=a q+O(q^2), where a=-alpha. With N=d^n>1,
+normalize the other eigenvalues to a probability vector r when delta_mass>0.
+The exact identity
+
+ S(rho(q)) = h(delta_mass)+delta_mass H(r),
+ 0 <= H(r) <= ln(N-1),
+
+proves the same expansion. If a>0, h(delta_mass)=a q ln(1/q)+O(q).
+If a=0, delta_mass=O(q^2) and the entropy is O(q^2 ln(1/q)). For N=1
+the entropy is identically zero. This alternate derivation rules out an
+unnoticed degeneracy problem in the claimed leading coefficient.
+
+A4. Overlap and subtraction
+
+Across site i, write v=sum_k sqrt(p_k) |a_k>|b_k>. The complementary
+marginal is sum_k p_k |b_k><b_k|. Direct evaluation gives
+
+ <v|tau tensor psi_complement|v>
+   = sum_k p_k^2 <a_k|tau|a_k>
+   = Tr(tau psi_i^2).
+
+There is no transpose or commutation assumption on tau. For the fixed
+number t_i=Tr(tau psi_i) in [0,1],
+
+ h(q t_i)=t_i q ln(1/q)+O(q).
+
+This is immediate for t_i=0; for t_i>0 the other linear term contains the
+fixed finite number -t_i ln t_i. Combining all terms gives
+
+ a-n+sum_i t_i = sum_i Tr[tau(psi_i-psi_i^2)] = Delta,
+
+which is exactly Claim A. The linear term -n q S(tau) has correctly been
+absorbed into O(q). Finite dimension ensures S(tau) is finite.
+
+B. THE Delta=0 SUPPORT REDUCTION
+
+B1. Noncommuting positive factors
+
+For K_i=psi_i(I-psi_i)>=0,
+
+ Tr(tau K_i) = ||K_i^(1/2) tau^(1/2)||_HS^2 >=0.
+
+If their sum vanishes, each term vanishes and K_i^(1/2) tau^(1/2)=0.
+Hence supp(tau) is contained in ker(K_i). This implication is valid even
+when tau and psi_i do not commute. It is stronger than a statement about
+diagonal entries and is the correct support conclusion.
+
+B2. Pure sites must be separated first
+
+If psi_i is pure, Schmidt rank at that cut is one, so the global pure state
+factors at that site. Repeating over F, all sites with pure marginals,
+
+ psi = (tensor_{i in F} phi_i) tensor chi_E,
+
+where chi_E is a pure state on the other sites. Its one-site marginals
+are the original psi_i for i in E and are all mixed. A mixed density matrix
+has every positive eigenvalue strictly less than one. Thus, for i in E,
+
+ ker[psi_i(I-psi_i)] = ker(psi_i),
+ supp(tau) subset ker(psi_i), and t_i=0.
+
+The separation of F is essential: for a pure marginal psi_i(I-psi_i)=0,
+so Delta=0 imposes no orthogonality restriction there. The candidate
+handles this distinction correctly. E can be empty; a singleton E cannot
+arise from this pure factorization, but the proof needs no special case.
+
+B3. Orthogonal patterns, including entangled retained subsets
+
+Let Q_i project onto supp(psi_i) for i in E, and let Q_tau project onto
+supp(tau). We have Q_i Q_tau=0. For any retained subset T of E, its
+reduced state chi_T is supported on tensor_{i in T} ran(Q_i). One way to
+see this is that each complementary local projection has zero expectation
+in the corresponding positive reduced state; therefore it annihilates its
+support. This argument does not require chi_T to be a product state.
+
+The branch for T is supported on
+
+ (tensor_{i in T} ran(Q_i)) tensor
+ (tensor_{i in E\T} ran(Q_tau)).
+
+Two distinct subsets differ at some site, where these local subspaces are
+orthogonal. Their global branch supports are therefore orthogonal. The
+eigenvalues of their weighted mixture are the union of their weighted
+individual eigenvalues. This gives the exact entropy identity
+
+ S(R_q^tensor |E|(chi_E))
+   = |E| h(q)+|E| q S(tau)+E_{T subset E} S(chi_T),
+
+where each site belongs to T independently with probability 1-q. Zero-weight
+branches at q=0 or q=1 cause no problem, with 0 ln 0=0 and S(chi_empty)=0.
+This expectation is nonnegative. The candidate's entropy computation is
+therefore exact, not a lower bound obtained by subadditivity.
+
+B4. Explicit pure-site binary-error argument
+
+For a pure factor phi, let J be the retention flag. The cq entropy identity is
+
+ S((1-q)phi+q tau)=h(q)+q S(tau)-H(J|B).
+
+Measure {phi,I-phi}, with outcome Y; guess retention on phi and replacement
+on I-phi. The error event occurs only when replacement was chosen and the
+phi outcome appears. Hence e=q Tr(phi tau). Data processing gives
+H(J|B)<=H(J|Y). Because J is binary and the guess is determined by Y, J is
+determined by Y and the binary error bit Z. Therefore
+
+ H(J|Y)=H(Z|Y)<=H(Z)=h(e).
+
+This derivation is valid even if e>1/2, and requires neither a uniform flag
+nor an optimal decision rule. Thus every pure factor has G_phi(q)>=0.
+
+In fact the proof gives the useful exact decomposition
+
+ G(q)=sum_{i in F} G_phi_i(q)+E_{T subset E} S(chi_T) >=0.
+
+This proves Claim B for all q in [0,1], including F empty and E empty.
+For a simple check, take a two-site Schmidt state with weights p,1-p on
+levels 0,1 and a reset supported on orthogonal levels 2,3. Then exactly
+G(q)=2q(1-q)h(p), for any reset spectrum on levels 2,3.
+
+C. COROLLARY AND EXACT SCOPE
+
+If Delta>0, the fixed-tuple remainder satisfies |r(q)|<=Cq for small q.
+Thus G(q)>=q[Delta ln(1/q)-C]>=0 for sufficiently small q. At q=0,
+G(0)=S(psi)=0. If Delta=0, Claim B applies on the entire interval.
+The claimed existence of q_0>0 follows.
+
+The constants C, the neighborhood where the expansion holds, and hence
+q_0 can depend on n,d,psi,tau. Taking an infimum of these neighborhoods
+over changing inputs, dimensions, or blocklengths is not justified. Nothing
+here proves the all-q conjecture for Delta>0, excludes q-dependent-input
+counterexamples, or permits a regularized capacity conclusion.
+
+D. SUPPORTING FILE CHECKS
+
+The entropy identity (1) in tensorization-obstruction66.txt is correct:
+S(JB)=n h(q)+nq S(tau)+E_T S(psi_T), and H(J|B)=S(JB)-S(B).
+Consequently its reformulation (2) is equivalent to (C). The single-use
+binary-Fano step is justified explicitly above. The product extension uses
+entropy additivity on product outputs. The stated mixed-input extension,
+conditional on a pure-input proof for fixed n, correctly uses concavity of
+the output entropy and convexity of the proposed right-hand side.
+
+The rejected local induction step indeed fails in its supplied example:
+the excess is h(1/2)-h(1/4)=0.130812035941137 nats. It is not a counterexample
+to the target inequality (C). I did not rerun or certify that file's 3,627
+structured cases or 48 optimization runs, nor audit its literature-scope
+claims. Those claims are unnecessary for A, B, and this corollary.
+
+E. NUMERICAL FALSIFICATION ATTEMPTS AND THEIR LIMITS
+
+audit66.py constructs each output both as a retention-subset sum and through
+sequential local superoperator contractions. Its deterministic seed is
+660024. It tests 50 saved tuples at 14 q values each (700 evaluations):
+q=0, 10^-7, 10^-6, 10^-5, 10^-4, 10^-3, .01, .1, .25, .5, .75, .9, .99, 1.
+
+The set includes 36 random pure-input tuples with (n,d)=(2,2),(2,3),(3,2)
+and varying reset rank, plus boundary and structured cases. Nine tuples
+have Delta=0 by construction. They cover d=1, an unchanged rank-one input,
+quadratic small eigenvalues, noncommuting pure-site resets, a binary error
+above 1/2, entangled orthogonal supports with a mixed reset, an entangled
+block plus an independent pure site, and a common unitary rotation of the
+orthogonal supports. Additional cases approach a product input with small
+positive Schmidt weight and test positive but small Delta.
+
+Recorded results:
+  maximum channel-construction discrepancy: 2.220446049250313e-16
+  maximum Schmidt-overlap identity discrepancy: 2.220446049250313e-16
+  maximum trace coefficient discrepancy: 1.9984014443252818e-15
+  minimum Delta=0 margin: -1.0193354865738837e-14
+  declared failure tolerance: 2e-10
+  detected numerical failures: 0
+
+To avoid mistaking slow inverse-log convergence for a failure of Claim A,
+the script also checks the linear remainder against the spectral expression
+
+ c = Delta-sum_{mu_j>0} mu_j ln(mu_j)-n S(tau)
+             -sum_{t_i>0} t_i ln(t_i).
+
+It records (G-Delta q ln(1/q))/q, whose limiting value is c. At q=10^-7 the
+largest discrepancy over these tuples is 3.374372827380512e-06. No numerical
+asymptotic rate certificate is inferred from this. All inputs, spectra and
+sampled values are saved in numeric-evidence.json; this is floating-point
+evidence, with no interval arithmetic, global search, or arbitrary-precision
+guarantee. Tiny negative margins at equality are within the declared
+tolerance and are not presented as exact nonnegativity certificates.
+
+F. REFERENCE CHECK AND REPORTING LIMITS
+
+The analytic Hermitian matrix theorem used in A was checked against
+Theorem 1.1, page 1, of Giovanni Barbarino and Vanni Noferini,
+"On the Rellich eigendecomposition of para-Hermitian matrices and the sign
+characteristics of *-palindromic matrix polynomials", arXiv:2211.15539v1:
+https://arxiv.org/pdf/2211.15539 . That theorem supplies analytic eigenvalues
+and an analytic orthonormal eigenbasis for a one-parameter analytic Hermitian
+matrix on an open real interval. Only this theorem and its hypotheses were
+used; the paper's para-Hermitian extensions are outside the audit.
+
+Search results also led to the authors' survey by Parusinski and Rainer,
+https://www.mat.univie.ac.at/~armin/publ/handbook_paper.pdf . Its introduction
+and displayed Rellich statement corroborate the same standard theorem.
+This was a targeted theorem check, not a search for originality. Failed
+reference URLs and the optional-file discovery failure are preserved in
+execution-failures.txt. No full-text claim is made for inaccessible sources.
+
+G. RECOMMENDED PRESENTATION CLARIFICATIONS
+
+These do not change the theorem and are not blocking correctness defects:
+  1. Define h(0)=h(1)=0, S(chi_empty)=0, and the retained-set distribution.
+  2. State explicitly that rho(q) is Hermitian polynomial for all real q,
+     while positivity is needed only for q>=0 near zero.
+  3. Expand the zero-trace implication using the Hilbert-Schmidt norm.
+  4. Supply the retained-support inclusion and the binary error-bit proof.
+  5. Keep the fixed-tuple, nonuniform restriction adjacent to the corollary.
+
+The mathematical verdict applies to the two exact input hashes above.
+Any subsequent alteration requires comparison against those inputs.

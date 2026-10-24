@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "algorithm": "SHA256",
+  "input_hashes_verified": true,
+  "files": [
+    {
+      "file": "audit-report.txt",
+      "bytes": 14308,
+      "sha256": "b6a8e085990c95966157faf78ca52a6ff428259d652a7e358d9574b45d664359"
+    },
+    {
+      "file": "audit66.py",
+      "bytes": 10362,
+      "sha256": "11a6392dddbad3cd5d75463eef17edf36442d0fbf7321781311b37c4697a45d6"
+    },
+    {
+      "file": "cleanup-status.json",
+      "bytes": 401,
+      "sha256": "3e1386983dd095c7ed945aeedb17fd1abdbd42fb81b3f368ed03bce6260da92c"
+    },
+    {
+      "file": "execution-failures.txt",
+      "bytes": 1259,
+      "sha256": "00b8fe68e503b47a7988a52061f43dc3e17ab9192ab2826108830c692f729de0"
+    },
+    {
+      "file": "numeric-evidence.json",
+      "bytes": 535764,
+      "sha256": "64904ae6d7f3fad754830e88f037a2556c83a913338f02de85b3b57e5197cc12"
+    },
+    {
+      "file": "numeric-run.log",
+      "bytes": 400,
+      "sha256": "f59ec6f4b52c26bdd1e38568c3d62b035c17913c8c03931c2909e5af87e4cf6f"
+    },
+    {
+      "file": "small-noise-lemma66.txt",
+      "bytes": 3554,
+      "sha256": "9e3b836f222936aa5646da007d442e22fa24e38c6bd8ef7fd751b97066b9bd6c"
+    },
+    {
+      "file": "tensorization-obstruction66.txt",
+      "bytes": 4913,
+      "sha256": "40fb1662e5e67f224def0eb884e07233d9b3441e37fb28022f5e29486c3cdc0c"
+    },
+    {
+      "file": "verdict.json",
+      "bytes": 3044,
+      "sha256": "3f6818ded16d80951bede9cc7dfa22005c1900bcf7e142e1813ac228ba180742"
+    }
+  ],
+  "exclusions": [
+    "SHA256SUMS.json",
+    "archive-verification.json"
+  ]
+}

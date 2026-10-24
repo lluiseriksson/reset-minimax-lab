@@ -1,0 +1,12 @@
+{
+  "case_count": 50,
+  "channel_evaluations": 700,
+  "delta_zero_cases": 9,
+  "failure_count": 0,
+  "max_channel_error": 2.220446049250313e-16,
+  "max_schmidt_error": 2.220446049250313e-16,
+  "max_a_trace_error": 1.9984014443252818e-15,
+  "minimum_delta_zero_margin": -1.0193354865738837e-14,
+  "max_linear_remainder_error_at_q_1e_minus_7": 3.374372827380512e-06,
+  "tolerance": 2e-10
+}

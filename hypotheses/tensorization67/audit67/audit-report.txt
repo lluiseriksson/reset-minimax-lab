@@ -1,0 +1,242 @@
+TARGETED MATHEMATICAL AUDIT — PURITY BOUND 67
+Date: 2026-10-24
+
+VERDICT
+
+The nonasymptotic bound (P) and the proposed explicit sufficient neighborhood
+are correct under their intended assumptions. No substantive mathematical
+gap, reversed inequality, or counterexample was found.
+
+State the parameter domain explicitly as n,d positive integers, a normalized
+pure input psi on (C^d)^tensor n, a density matrix tau, and
+0<=q<=1/(2n) for (P). The channel context already implies q>=0; the phrase
+"when nq<=1/2" should retain this physical domain. The formula for q_0
+applies only when Delta>0. These are clarifications of the intended domain,
+not repairs requiring an additional substantive hypothesis.
+
+This is a separate targeted, dependent AI audit, not independent human
+review or formal verification. It gives no score, originality assessment,
+general all-noise tensorization proof, or capacity conclusion. The completed
+audit66 archive has not been modified. No large numerical campaign was
+performed or needed for the proof below.
+
+EXACT INPUT
+
+Source:
+C:\Trabajo\airr\2026-10-24_propuesta42a\purity-bound67-candidate.txt
+SHA256:
+79738CB65A42C4C673F07E2716DF7F7354F86CF14CC1517C2829DE718E4FE070
+
+The archive includes an exact byte copy of that input. The candidate refers
+to G from lemma66. For a self-contained audit, the definition used here is
+
+ G(q)=S(R_q^tensor n(psi))-n[q S(tau)+h(q)]+sum_i h(q t_i),
+ t_i=Tr(tau psi_i).
+
+That definition is the one in small-noise-lemma66.txt with SHA256
+9E3B836F222936AA5646DA007D442E22FA24E38C6BD8EF7FD751B97066B9BD6C.
+It is contextual notation only; this report does not alter or reopen the
+prior audit. Binary entropy uses h(0)=h(1)=0 and natural logarithms.
+
+1. PRELIMINARY BOUNDS AND DOMAIN
+
+Set b_i=Tr(tau psi_i^2), a=sum_i(1-b_i), and T=sum_i t_i.
+Since each marginal satisfies 0<=psi_i^2<=psi_i<=I,
+
+ 0<=b_i<=t_i<=1,
+ 0<=a<=n,
+ Delta=T-sum_i b_i=a-n+T>=0,
+ Delta<=a.
+
+The traces of products are ordered because tau is positive; no commutation
+of tau and psi_i is assumed. The useful combined inequality is
+
+ 0<=Delta<=a<=n.
+
+Also 0<=S(tau)<infinity in fixed finite dimension. These facts justify all
+uses of positivity and the constants below.
+
+2. PROOF OF THE PURITY-BASED BOUND (P)
+
+Assume first 0<q<=1/(2n). Let r=(1-q)^n and p=1-r. Both p and 1-p are
+strictly positive. The retention-pattern expansion separates the no-reset
+branch, giving
+
+ rho=(1-p)psi+p sigma,
+
+where sigma is a density matrix: it is the normalized mixture of the
+remaining branches with nonnegative weights. Let psi=|v><v| and
+f=<v|sigma|v> in [0,1]. Since Tr(sigma^2)<=1,
+
+ Tr(rho^2)
+   =(1-p)^2+2p(1-p)f+p^2 Tr(sigma^2)
+   <=(1-p)^2+2p(1-p)f+p^2
+   =1-2p(1-p)(1-f).
+
+Let lambda=lambda_max(rho) in [0,1] and e=1-lambda. Then
+
+ e-(1-lambda^2)/2=(1-lambda)^2/2>=0,
+ lambda^2<=Tr(rho^2).
+
+Consequently, with exactly the signs appearing in the candidate,
+
+ e>=(1-lambda^2)/2>=(1-Tr(rho^2))/2
+   >=p(1-p)(1-f).
+
+If F=<v|rho|v>, then F=1-p+pf and 1-F=p(1-f), so
+
+ e>=(1-p)(1-F).
+
+For each replacement subset U, let rho_U be the corresponding normalized
+branch and w_U=q^|U|(1-q)^(n-|U|). Its overlap F_U=<v|rho_U|v> lies in [0,1].
+Because the weights sum to one,
+
+ 1-F=sum_U w_U(1-F_U).
+
+Every summand is nonnegative. The U=empty contribution vanishes, while
+the n single-replacement terms give
+
+ 1-F>=q(1-q)^(n-1) sum_i[1-<v|E_i(psi)|v>]
+     =q(1-q)^(n-1) a.
+
+The equality uses <v|E_i(psi)|v>=Tr(tau psi_i^2). Directly, in a Schmidt
+decomposition v=sum_k sqrt(s_k)|u_k>|w_k> across site i, the overlap is
+sum_k s_k^2 <u_k|tau|u_k>, exactly that trace. Hence
+
+ e>=a q(1-q)^(2n-1)=:x>=0.
+
+In the other direction, the Rayleigh quotient and the positive no-reset
+branch imply lambda>=F>=r. Bernoulli's inequality gives
+
+ e<=1-r=p<=nq<=1/2.
+
+Therefore 0<=x<=e<=1/2, including the range needed for binary entropy
+monotonicity. If e>0, normalize the nonlargest eigenvalues to a probability
+vector u. The exact entropy identity is
+
+ S(rho)=h(e)+e H(u)>=h(e).
+
+For e=0, rho is pure and the same inequality holds with h(0)=0. Binary
+entropy is increasing on [0,1/2], so
+
+ S(rho)>=h(e)>=h(x)=h(a q(1-q)^(2n-1)).
+
+This proves (P). At q=0, the mixture sigma is not defined, but it is not
+needed: rho=psi, x=0 and both sides of (P) are zero. The upper endpoint
+q=1/(2n) is included throughout. No division by e occurs in the e=0 case.
+
+3. THE EXPLICIT SUFFICIENT NEIGHBORHOOD
+
+Assume Delta>0 and set
+
+ q_0=min{1/(2n), Delta/(4n^2),
+         exp[-2n(ln n+S(tau)+1)/Delta]}.
+
+All three quantities are strictly positive real numbers; n>=1 gives
+ln n>=0 and S(tau)>=0. Thus q_0>0 mathematically. Extremely small values
+could underflow in a numerical implementation; this does not affect the
+exact existence statement. No computational underflow guarantee is claimed.
+
+Fix 0<q<=q_0 and abbreviate L=ln(1/q)>0. Since a>=Delta>0 and q<1,
+the earlier bound x>0 also gives e>0, so ln(1/e) is well-defined.
+Bernoulli's inequality with exponent 2n-1 yields
+
+ e>=a q(1-q)^(2n-1)
+   >=a q-a(2n-1)q^2
+   >=a q-2n^2 q^2=:b,
+
+where a<=n and 2n-1<=2n were used in the last step. Furthermore,
+2n^2 q<=Delta/2<=a/2, so b>=a q/2>0. This explicitly justifies the
+nonnegative lower coefficient used in the candidate.
+
+The grouping identity above and h(e)>=e ln(1/e) give S(rho)>=e ln(1/e).
+Since e<=nq<=1/2,
+
+ ln(1/e)>=ln(1/(nq))>0.
+
+Multiplying first by e>=0 and then using e>=b gives
+
+ S(rho)>=e ln(1/e)
+        >=e ln(1/(nq))
+        >=b ln(1/(nq)).
+
+There is no reliance here on monotonicity of the function e ln(1/e),
+which would be unsafe across its maximum at e=1/euler. The candidate's
+inequality is valid because it separately bounds the logarithm and its
+nonnegative coefficient. Expanding with ln(1/(nq))=L-ln n gives
+
+ S(rho)>=q[aL-a ln n-2n^2 qL+2n^2 q ln n]
+        >=q[aL-a ln n-2n^2 qL],
+
+where the last discarded term is nonnegative because ln n>=0.
+
+For the desired conjecture right-hand side, put
+
+ B(q)=n[q S(tau)+h(q)]-sum_i h(qt_i).
+
+For 0<q<1, the elementary bounds
+
+ h(q)<=qL+q,
+ h(qt_i)>=qt_i ln(1/(qt_i))
+
+hold, with the second right-hand side interpreted as zero when t_i=0.
+The first uses -(1-q)ln(1-q)<=q; the second drops the nonnegative other
+term of the binary entropy. Thus, with 0 ln 0=0,
+
+ B(q)<=(n-T)qL+nq[S(tau)+1]+q sum_i t_i ln(t_i)
+     <=(n-T)qL+nq[S(tau)+1].
+
+The sign of this discarded term is correct: every t_i ln(t_i)<=0.
+Subtracting this upper bound on B from the lower bound on S yields
+
+ G(q)>=q[Delta L-a ln n-2n^2 qL-n(S(tau)+1)].
+
+Because 2n^2 q<=Delta/2, L>0, a<=n and ln n>=0,
+
+ G(q)>=q[(Delta/2)L-n ln n-n(S(tau)+1)].
+
+The exponential restriction in q_0 is equivalent to
+
+ L>=2n(ln n+S(tau)+1)/Delta.
+
+It therefore makes the final bracket nonnegative, proving G(q)>=0.
+Every inequality is non-strict where needed, so q=q_0 is included. At q=0,
+G(0)=S(psi)=0, establishing the full closed interval [0,q_0].
+
+4. EDGE CASES AND NONCLAIMS
+
+If a=0, (P) reduces to S(rho)>=0, with no logarithm of zero required.
+In fact Delta<=a implies Delta=0, so this case is excluded from the q_0
+formula. The same applies to d=1. For n=1 the only marginal is the pure
+input and Delta=0; (P) still applies, while the Delta>0 neighborhood has no
+instance. Inputs with t_i=0 or t_i=1 and rank-deficient resets are covered
+by the stated conventions and the proofs above.
+
+The formula must not be evaluated at Delta=0. The candidate appropriately
+refers that case to the separate support argument in lemma66. No version
+of that argument is needed for this audit's Delta>0 conclusion.
+
+The quantitative neighborhood depends on n, Delta and S(tau). It need not
+remain bounded away from zero when these parameters vary, particularly
+as Delta approaches zero. This proof supplies neither the all-q conjecture
+for general entangled inputs nor any regularized or energy-uniform capacity
+result. It does not assess whether the bounds are known or novel.
+
+5. EVIDENCE, FAILURES AND LIMITATIONS
+
+The verdict follows from the explicit algebraic proof above. The parent's
+reported diagnostic on 1,418 eligible cases was not rerun, read, or treated
+as a proof certificate. No new floating-point validation campaign was run.
+No literature search or external theorem beyond the elementary inequalities
+proved or stated above was needed for this bounded audit.
+
+No failed tool execution or failed mathematical step occurred during this
+audit. In accordance with the task, no cleanup was attempted; the separate
+temporary directory is retained and its complete evidence is archived on D:.
+The prior cleanup rejection belongs to audit66, whose archive is immutable.
+
+Nonblocking presentation improvements are limited to spelling out the
+physical q domain, 0<=Delta<=a<=n, the binary entropy endpoint conventions,
+the e=0 treatment, and the two sign-controlled discarded terms.
+
+This verdict applies only to the exact candidate hash recorded above.
