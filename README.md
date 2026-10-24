@@ -21,7 +21,22 @@ This repository does **not** certify an infinite-dimensional quantum capacity, a
 
 `finite-game-results50.json` is the original corrected execution. `verify.py` writes a new result under ignored `runs/`, leaving all historical files unchanged. It exits unsuccessfully on constraint or best-response failures or disagreement with the saved values. `manifest.json` binds the immutable scientific files.
 
-## Optional larger checks
+## Spectral and single-letter extensions
+
+The native programs and original outputs under `extensions/` are separate finite checks for a combined manuscript in preparation. They include single-letter Holevo games, multiplicity-weighted spectral counts with slowly varying factors, and high-precision comparisons near equal budgets. They do not determine regularized classical capacity.
+
+```powershell
+python -m pip install -r requirements-extensions.txt
+python verify_extensions.py
+```
+
+The replay copies each group into a new ignored `runs/` directory before executing, so historical inputs and outputs stay intact. `extensions/manifest.json` binds the native bytes. The latest summary is `runs/extensions-verification.json`; complete outputs and logs remain in the individual replay directory.
+
+The Holevo group retains **14 invalid finite ground-state KKT certificates among60 grids**. The verification expects and reports those failures; it does not claim all60 are saddles. Their eventual validity is an analytical claim outside this program. The regular-variation group preserves its first underflow/NaN diagnostic and the corrected code. Only the corrected script runs by default. The quartic group uses65-digit arithmetic but no interval enclosure. No score or prior model report is packaged here.
+
+The root-authored `input*.md` sketches are included because the native scripts record their hashes; those hashes do not certify their mathematical claims. All code, sketches and outputs were produced with substantial AI assistance and a shared filesystem. Labels such as independent in historical script headers do not establish human or statistical independence. The new workflow must actually pass on each platform before cross-platform reproduction is claimed.
+
+## Optional oscillator larger checks
 
 `continuum_check51.py` evaluates explicit continuum integrals and six larger finite grids (up to 327681 levels); the original output is `continuum-results51.json`. This can take several minutes per case and is excluded from default CI. It is a diagnostic of convergence, not its proof. Its formulas do not establish uniqueness of all optimizers or a physical phase transition.
 
