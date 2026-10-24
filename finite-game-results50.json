@@ -1,0 +1,1236 @@
+{
+  "status": "finite_numerical_diagnostic_not_a_capacity_or_limit_theorem",
+  "lambda": 0.6,
+  "candidate_continuum_boundary_ratio": 0.12823752863469068,
+  "scope": "Finite probability simplex game: maximize in p and minimize in t, both constrained by mean energy and normalized. Positive stationary points satisfy formal saddle KKT equations. Floating residuals are not interval certificates; cutoff and continuum/quantum minimax limits remain unproved.",
+  "not_claimed": [
+    "global quantum capacity curve",
+    "optimal infinite-dimensional reset",
+    "physical phase transition",
+    "novelty",
+    "AIRR score"
+  ],
+  "rows": [
+    {
+      "E": 8,
+      "c": 0.05,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 19,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            2.9444389791664403,
+            -5.991464547107982
+          ],
+          "solution_parameters": [
+            0.03756112999772728,
+            5.4786303693500695,
+            -3.2529534684014734
+          ],
+          "solver_success": true,
+          "residual_max": 0.04999999999999788,
+          "nfev": 30
+        },
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            0.6931471805599453,
+            -6.907755278982137
+          ],
+          "solution_parameters": [
+            0.07860404872586718,
+            1.6142293496581521,
+            -2.591016412865771
+          ],
+          "solver_success": true,
+          "residual_max": 3.427813588530171e-15,
+          "nfev": 19
+        }
+      ],
+      "constraint_residual_max": 3.427813588530171e-15,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": -3.1086244689504383e-15,
+      "reset_linear_best_response_gap": -3.2255864645946986e-12,
+      "alpha": 1.0817759067115196,
+      "beta": 5.024014672574513,
+      "delta": 0.07494382748968619,
+      "input_mass_at_zero": 0.03996578206880468,
+      "reset_mass_at_zero": 0.7703147779611255,
+      "input_scaled_mean": 1.0000000000000013,
+      "reset_scaled_mean": 0.05000000000000343,
+      "finite_entropy_game_value_bits": 4.983643790938199,
+      "oscillator_benchmark_minus_game_bits": 0.4515462246387738,
+      "pointwise_quantum_correction_upper_bits": 0.014091625447521072,
+      "pointwise_purification_error": 0.0012743625248682916,
+      "last_level_reset_probability": 1.768087717653649e-107,
+      "last_level_input_probability": 2.3990218911301157e-20,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.05,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 8,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.07860404872586718,
+            1.6142293496581521,
+            -2.591016412865771
+          ],
+          "solution_parameters": [
+            0.09151539464792509,
+            1.7315323845208515,
+            -4.78042808445241
+          ],
+          "solver_success": true,
+          "residual_max": 8.881784197001252e-16,
+          "nfev": 8
+        }
+      ],
+      "constraint_residual_max": 8.881784197001252e-16,
+      "kkt_shape_residual": 7.105427357601002e-14,
+      "input_linear_best_response_gap": 8.881784197001252e-16,
+      "reset_linear_best_response_gap": -9.053591210061995e-12,
+      "alpha": 1.0958336465358611,
+      "beta": 5.64930418524751,
+      "delta": 0.00839240554007112,
+      "input_mass_at_zero": 0.0034809486548023124,
+      "reset_mass_at_zero": 0.6195534110257935,
+      "input_scaled_mean": 1.0,
+      "reset_scaled_mean": 0.04999999999999997,
+      "finite_entropy_game_value_bits": 7.387211787734838,
+      "oscillator_benchmark_minus_game_bits": 0.3707953388599172,
+      "pointwise_quantum_correction_upper_bits": 0.0010501259927784472,
+      "pointwise_purification_error": 6.876806596189116e-05,
+      "last_level_reset_probability": 3.784999494755591e-119,
+      "last_level_input_probability": 3.500134328461182e-21,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.05,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 10,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.09151539464792509,
+            1.7315323845208515,
+            -4.78042808445241
+          ],
+          "solution_parameters": [
+            0.09163310245542539,
+            1.7465878779844164,
+            -7.213914214735525
+          ],
+          "solver_success": true,
+          "residual_max": 2.220446049250313e-16,
+          "nfev": 10
+        }
+      ],
+      "constraint_residual_max": 2.220446049250313e-16,
+      "kkt_shape_residual": 8.526512829121202e-14,
+      "input_linear_best_response_gap": 3.552713678800501e-15,
+      "reset_linear_best_response_gap": 4.180888968363661e-11,
+      "alpha": 1.0959626423035356,
+      "beta": 5.735000730656724,
+      "delta": 0.0007362695905942334,
+      "input_mass_at_zero": 0.00025824710492980613,
+      "reset_mass_at_zero": 0.5259324508618629,
+      "input_scaled_mean": 0.9999999999999998,
+      "reset_scaled_mean": 0.04999999999999999,
+      "finite_entropy_game_value_bits": 9.78941245798256,
+      "oscillator_benchmark_minus_game_bits": 0.34856668153717685,
+      "pointwise_quantum_correction_upper_bits": 8.194597938419502e-05,
+      "pointwise_purification_error": 4.2487160700044585e-06,
+      "last_level_reset_probability": 3.078793118315725e-121,
+      "last_level_input_probability": 8.705141749999195e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.05,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 12,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.09163310245542539,
+            1.7465878779844164,
+            -7.213914214735525
+          ],
+          "solution_parameters": [
+            0.0914803810015795,
+            1.7481640816557786,
+            -9.790895746948006
+          ],
+          "solver_success": true,
+          "residual_max": 8.881784197001252e-16,
+          "nfev": 12
+        }
+      ],
+      "constraint_residual_max": 8.881784197001252e-16,
+      "kkt_shape_residual": 8.526512829121202e-14,
+      "input_linear_best_response_gap": 1.5987211554602254e-14,
+      "reset_linear_best_response_gap": -1.082883782643762e-11,
+      "alpha": 1.0957952780758216,
+      "beta": 5.744047387677682,
+      "delta": 5.5958749935777034e-05,
+      "input_mass_at_zero": 1.7795847171928886e-05,
+      "reset_mass_at_zero": 0.4770125122607778,
+      "input_scaled_mean": 1.0000000000000004,
+      "reset_scaled_mean": 0.04999999999999996,
+      "finite_entropy_game_value_bits": 12.189837199217873,
+      "oscillator_benchmark_minus_game_bits": 0.34308640848459326,
+      "pointwise_quantum_correction_upper_bits": 6.182153864885182e-06,
+      "pointwise_purification_error": 2.6546923841024394e-07,
+      "last_level_reset_probability": 5.397847671443531e-122,
+      "last_level_input_probability": 2.1901660285946808e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 8,
+      "c": 0.1,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 12,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            2.1972245773362196,
+            -4.605170185988091
+          ],
+          "solution_parameters": [
+            0.09182755833862999,
+            1.201083805213094,
+            -2.1513621482526615
+          ],
+          "solver_success": true,
+          "residual_max": 2.1094237467877974e-15,
+          "nfev": 12
+        }
+      ],
+      "constraint_residual_max": 2.1094237467877974e-15,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 3.1086244689504383e-15,
+      "reset_linear_best_response_gap": 2.1426194152240896e-12,
+      "alpha": 1.0961757794093143,
+      "beta": 3.3237172334308203,
+      "delta": 0.1163255970976136,
+      "input_mass_at_zero": 0.05134701259506762,
+      "reset_mass_at_zero": 0.6243477221655303,
+      "input_scaled_mean": 0.9999999999999979,
+      "reset_scaled_mean": 0.10000000000000125,
+      "finite_entropy_game_value_bits": 4.866980076607859,
+      "oscillator_benchmark_minus_game_bits": 0.5682099389691144,
+      "pointwise_quantum_correction_upper_bits": 0.018810793356279668,
+      "pointwise_purification_error": 0.0017785466945556324,
+      "last_level_reset_probability": 3.422558344097284e-78,
+      "last_level_input_probability": 1.4049514651600257e-20,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.1,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 7,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.09182755833862999,
+            1.201083805213094,
+            -2.1513621482526615
+          ],
+          "solution_parameters": [
+            0.11934714259016317,
+            1.3421374354382538,
+            -3.834230673331288
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 7
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 1.7763568394002505e-15,
+      "reset_linear_best_response_gap": -5.660416579900129e-12,
+      "alpha": 1.126760997135404,
+      "beta": 3.8272151944126995,
+      "delta": 0.02161796335010259,
+      "input_mass_at_zero": 0.005969898147348614,
+      "reset_mass_at_zero": 0.40977047833430597,
+      "input_scaled_mean": 1.0,
+      "reset_scaled_mean": 0.09999999999999995,
+      "finite_entropy_game_value_bits": 7.2547302070902315,
+      "oscillator_benchmark_minus_game_bits": 0.5032769195045237,
+      "pointwise_quantum_correction_upper_bits": 0.0014972688736576336,
+      "pointwise_purification_error": 0.00010182571006390925,
+      "last_level_reset_probability": 5.226659448406285e-88,
+      "last_level_input_probability": 1.0890783045358228e-21,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.1,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.11934714259016317,
+            1.3421374354382538,
+            -3.834230673331288
+          ],
+          "solution_parameters": [
+            0.12320516368641495,
+            1.3691446634070594,
+            -5.774447797384033
+          ],
+          "solver_success": true,
+          "residual_max": 3.674838211509268e-14,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 3.674838211509268e-14,
+      "kkt_shape_residual": 5.684341886080802e-14,
+      "input_linear_best_response_gap": -1.0658141036401503e-14,
+      "reset_linear_best_response_gap": 1.5092371796754378e-12,
+      "alpha": 1.1311164611664997,
+      "beta": 3.9319860851568733,
+      "delta": 0.0031059122780819934,
+      "input_mass_at_zero": 0.0005724779939335264,
+      "reset_mass_at_zero": 0.27604904924156975,
+      "input_scaled_mean": 1.0000000000000056,
+      "reset_scaled_mean": 0.10000000000003675,
+      "finite_entropy_game_value_bits": 9.654315037265567,
+      "oscillator_benchmark_minus_game_bits": 0.48366410225417056,
+      "pointwise_quantum_correction_upper_bits": 0.0001170904175638855,
+      "pointwise_purification_error": 6.251469230031959e-06,
+      "last_level_reset_probability": 1.704683778415552e-90,
+      "last_level_input_probability": 2.3040708959667333e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.1,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 9,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.12320516368641495,
+            1.3691446634070594,
+            -5.774447797384033
+          ],
+          "solution_parameters": [
+            0.12365808282840765,
+            1.3732308248263312,
+            -7.96305644270434
+          ],
+          "solver_success": true,
+          "residual_max": 1.1102230246251565e-15,
+          "nfev": 9
+        }
+      ],
+      "constraint_residual_max": 1.1102230246251565e-15,
+      "kkt_shape_residual": 2.842170943040401e-14,
+      "input_linear_best_response_gap": 2.3092638912203256e-14,
+      "reset_linear_best_response_gap": 9.504619313815965e-13,
+      "alpha": 1.1316288814973137,
+      "beta": 3.9480856853809416,
+      "delta": 0.0003480875801676169,
+      "input_mass_at_zero": 4.798551723902915e-05,
+      "reset_mass_at_zero": 0.20674609872241315,
+      "input_scaled_mean": 0.9999999999999989,
+      "reset_scaled_mean": 0.09999999999999995,
+      "finite_entropy_game_value_bits": 12.054420072599184,
+      "oscillator_benchmark_minus_game_bits": 0.4785035351032825,
+      "pointwise_quantum_correction_upper_bits": 8.861114532519128e-06,
+      "pointwise_purification_error": 3.8978181674294865e-07,
+      "last_level_reset_probability": 2.200713732926651e-91,
+      "last_level_input_probability": 5.648024301878834e-23,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 8,
+      "c": 0.12823752863469068,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 9,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            1.9166327548713815,
+            -4.107742084548251
+          ],
+          "solution_parameters": [
+            0.09478920247055268,
+            1.0298332306749447,
+            -1.942133613950591
+          ],
+          "solver_success": true,
+          "residual_max": 1.8346435481930712e-14,
+          "nfev": 9
+        }
+      ],
+      "constraint_residual_max": 1.8346435481930712e-14,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 1.509903313490213e-14,
+      "reset_linear_best_response_gap": 2.2258583864953607e-12,
+      "alpha": 1.0994270741864904,
+      "beta": 2.800598741789858,
+      "delta": 0.14339766788555194,
+      "input_mass_at_zero": 0.057431577293306335,
+      "reset_mass_at_zero": 0.5587138952711542,
+      "input_scaled_mean": 0.9999999999999928,
+      "reset_scaled_mean": 0.12823752863470902,
+      "finite_entropy_game_value_bits": 4.817309348279707,
+      "oscillator_benchmark_minus_game_bits": 0.6178806672972659,
+      "pointwise_quantum_correction_upper_bits": 0.02072394974485733,
+      "pointwise_purification_error": 0.0019899491167776084,
+      "last_level_reset_probability": 3.6281871712089147e-69,
+      "last_level_input_probability": 1.2510032086214556e-20,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.12823752863469068,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.09478920247055268,
+            1.0298332306749447,
+            -1.942133613950591
+          ],
+          "solution_parameters": [
+            0.12882457085457322,
+            1.1853554003155793,
+            -3.3122170985962933
+          ],
+          "solver_success": true,
+          "residual_max": 1.3322676295501878e-15,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 1.3322676295501878e-15,
+      "kkt_shape_residual": 3.552713678800501e-14,
+      "input_linear_best_response_gap": -8.881784197001252e-16,
+      "reset_linear_best_response_gap": -3.957445482427602e-12,
+      "alpha": 1.1374905576648908,
+      "beta": 3.271849431178154,
+      "delta": 0.03643530347798307,
+      "input_mass_at_zero": 0.007931450756910853,
+      "reset_mass_at_zero": 0.3206163400827703,
+      "input_scaled_mean": 1.0000000000000009,
+      "reset_scaled_mean": 0.12823752863469084,
+      "finite_entropy_game_value_bits": 7.197115777146278,
+      "oscillator_benchmark_minus_game_bits": 0.5608913494484771,
+      "pointwise_quantum_correction_upper_bits": 0.001706661572466547,
+      "pointwise_purification_error": 0.00011774409753684845,
+      "last_level_reset_probability": 1.530107368347646e-78,
+      "last_level_input_probability": 7.28283451701821e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.12823752863469068,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.12882457085457322,
+            1.1853554003155793,
+            -3.3122170985962933
+          ],
+          "solution_parameters": [
+            0.13545982997325062,
+            1.2237688517060856,
+            -4.74060140120937
+          ],
+          "solver_success": true,
+          "residual_max": 8.881784197001252e-16,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 8.881784197001252e-16,
+      "kkt_shape_residual": 5.684341886080802e-14,
+      "input_linear_best_response_gap": -1.7763568394002505e-15,
+      "reset_linear_best_response_gap": -2.340660998356725e-11,
+      "alpha": 1.1450631976912875,
+      "beta": 3.3999776283590997,
+      "delta": 0.008733392333084039,
+      "input_mass_at_zero": 0.0009899679624909869,
+      "reset_mass_at_zero": 0.1692901213810753,
+      "input_scaled_mean": 1.0000000000000007,
+      "reset_scaled_mean": 0.12823752863469062,
+      "finite_entropy_game_value_bits": 9.594798039409623,
+      "oscillator_benchmark_minus_game_bits": 0.5431811001101146,
+      "pointwise_quantum_correction_upper_bits": 0.00013392587137779063,
+      "pointwise_purification_error": 7.231427130789754e-06,
+      "last_level_reset_probability": 1.7491600293601248e-81,
+      "last_level_input_probability": 1.3620468722614404e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.12823752863469068,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.13545982997325062,
+            1.2237688517060856,
+            -4.74060140120937
+          ],
+          "solution_parameters": [
+            0.13683441681163327,
+            1.2329169202790105,
+            -6.159044438621064
+          ],
+          "solver_success": true,
+          "residual_max": 2.220446049250313e-16,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 2.220446049250313e-16,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 1.7763568394002505e-14,
+      "reset_linear_best_response_gap": -1.937061622214742e-12,
+      "alpha": 1.1466382687799377,
+      "beta": 3.431223558900724,
+      "delta": 0.002114272624035594,
+      "input_mass_at_zero": 0.00012229194966336535,
+      "reset_mass_at_zero": 0.08667003103279719,
+      "input_scaled_mean": 1.0000000000000002,
+      "reset_scaled_mean": 0.12823752863469068,
+      "finite_entropy_game_value_bits": 11.99452897166409,
+      "oscillator_benchmark_minus_game_bits": 0.538394636038376,
+      "pointwise_quantum_correction_upper_bits": 1.0139553222065383e-05,
+      "pointwise_purification_error": 4.501296449463229e-07,
+      "last_level_reset_probability": 1.1874482846000548e-82,
+      "last_level_input_probability": 3.2055309512355226e-23,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 8,
+      "c": 0.2,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            1.3862943611198906,
+            -3.2188758248682006
+          ],
+          "solution_parameters": [
+            0.0938368225303547,
+            0.6683987635929192,
+            -1.5071917989105612
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 2.4868995751603507e-14,
+      "input_linear_best_response_gap": 8.881784197001252e-16,
+      "reset_linear_best_response_gap": 6.14147621647021e-13,
+      "alpha": 1.098380500342398,
+      "beta": 1.9511106286446451,
+      "delta": 0.22153120946339255,
+      "input_mass_at_zero": 0.07134683686639721,
+      "reset_mass_at_zero": 0.4315573075039152,
+      "input_scaled_mean": 0.9999999999999996,
+      "reset_scaled_mean": 0.2,
+      "finite_entropy_game_value_bits": 4.720570232235879,
+      "oscillator_benchmark_minus_game_bits": 0.7146197833410941,
+      "pointwise_quantum_correction_upper_bits": 0.023958650635010795,
+      "pointwise_purification_error": 0.002355667259225973,
+      "last_level_reset_probability": 2.0373260607435714e-54,
+      "last_level_input_probability": 1.3287468484718311e-20,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.2,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.0938368225303547,
+            0.6683987635929192,
+            -1.5071917989105612
+          ],
+          "solution_parameters": [
+            0.1378782459176873,
+            0.8382028464756236,
+            -2.22959588376623
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 0.0,
+      "reset_linear_best_response_gap": 3.6634584255068603e-13,
+      "alpha": 1.1478357880730194,
+      "beta": 2.3122078481208015,
+      "delta": 0.10757189290141769,
+      "input_mass_at_zero": 0.013913056165990556,
+      "reset_mass_at_zero": 0.18375817539190634,
+      "input_scaled_mean": 0.9999999999999998,
+      "reset_scaled_mean": 0.2,
+      "finite_entropy_game_value_bits": 7.0830134923406405,
+      "oscillator_benchmark_minus_game_bits": 0.6749936342541147,
+      "pointwise_quantum_correction_upper_bits": 0.0021244250277771596,
+      "pointwise_purification_error": 0.00015020663013563197,
+      "last_level_reset_probability": 4.585713945600706e-62,
+      "last_level_input_probability": 5.002625110589376e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.2,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.1378782459176873,
+            0.8382028464756236,
+            -2.22959588376623
+          ],
+          "solution_parameters": [
+            0.14899195886165384,
+            0.8882860857311263,
+            -2.642715865022034
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 0.0,
+      "reset_linear_best_response_gap": -7.426392834020135e-12,
+      "alpha": 1.1606636561145292,
+      "beta": 2.4309596223907763,
+      "delta": 0.07116772491998821,
+      "input_mass_at_zero": 0.002916734900345255,
+      "reset_mass_at_zero": 0.059314327673278995,
+      "input_scaled_mean": 0.9999999999999996,
+      "reset_scaled_mean": 0.19999999999999996,
+      "finite_entropy_game_value_bits": 9.475257288569724,
+      "oscillator_benchmark_minus_game_bits": 0.6627218509500139,
+      "pointwise_quantum_correction_upper_bits": 0.00017031009754191653,
+      "pointwise_purification_error": 9.386772051829327e-06,
+      "last_level_reset_probability": 6.29119580689521e-65,
+      "last_level_input_probability": 7.649687304086489e-23,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.2,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 5,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.14899195886165384,
+            0.8882860857311263,
+            -2.642715865022034
+          ],
+          "solution_parameters": [
+            0.1517906699273069,
+            0.9017045220451974,
+            -2.793564666628995
+          ],
+          "solver_success": true,
+          "residual_max": 9.992007221626409e-16,
+          "nfev": 5
+        }
+      ],
+      "constraint_residual_max": 9.992007221626409e-16,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 1.2434497875801753e-14,
+      "reset_linear_best_response_gap": 1.8610113450279187e-12,
+      "alpha": 1.1639165681896289,
+      "beta": 2.4637991339731236,
+      "delta": 0.06120265753519197,
+      "input_mass_at_zero": 0.0006815576635755818,
+      "reset_mass_at_zero": 0.016198164908881707,
+      "input_scaled_mean": 0.999999999999999,
+      "reset_scaled_mean": 0.2,
+      "finite_entropy_game_value_bits": 11.873473340295373,
+      "oscillator_benchmark_minus_game_bits": 0.6594502674070934,
+      "pointwise_quantum_correction_upper_bits": 1.2986125158996688e-05,
+      "pointwise_purification_error": 5.864340078499262e-07,
+      "last_level_reset_probability": 3.7701913922638863e-66,
+      "last_level_input_probability": 1.6882114872112615e-23,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 8,
+      "c": 0.5,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 6,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            0.0,
+            -1.3862943611198906
+          ],
+          "solution_parameters": [
+            0.04302715768306923,
+            -0.5467592299524087,
+            -0.5927289180032986
+          ],
+          "solver_success": true,
+          "residual_max": 1.3322676295501878e-15,
+          "nfev": 6
+        }
+      ],
+      "constraint_residual_max": 1.3322676295501878e-15,
+      "kkt_shape_residual": 2.1316282072803006e-14,
+      "input_linear_best_response_gap": 1.7763568394002505e-15,
+      "reset_linear_best_response_gap": 2.1337792643905118e-13,
+      "alpha": 1.0439662461700812,
+      "beta": 0.578822605054274,
+      "delta": 0.5528166331870619,
+      "input_mass_at_zero": 0.10222746490350147,
+      "reset_mass_at_zero": 0.2077394743686812,
+      "input_scaled_mean": 0.9999999999999987,
+      "reset_scaled_mean": 0.4999999999999998,
+      "finite_entropy_game_value_bits": 4.528147471772727,
+      "oscillator_benchmark_minus_game_bits": 0.9070425438042458,
+      "pointwise_quantum_correction_upper_bits": 0.02517677307392487,
+      "pointwise_purification_error": 0.0024959389986908605,
+      "last_level_reset_probability": 8.72602790295758e-30,
+      "last_level_input_probability": 1.1481247699777266e-19,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.5,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 5,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.04302715768306923,
+            -0.5467592299524087,
+            -0.5927289180032986
+          ],
+          "solution_parameters": [
+            0.09156220047730998,
+            -0.41967513748975094,
+            -0.684194180334963
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 5
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 3.197442310920451e-14,
+      "input_linear_best_response_gap": 0.0,
+      "reset_linear_best_response_gap": -1.267562443896253e-12,
+      "alpha": 1.0958849391389422,
+      "beta": 0.6572603043689796,
+      "delta": 0.504496599103059,
+      "input_mass_at_zero": 0.027148581813680614,
+      "reset_mass_at_zero": 0.06206320699802464,
+      "input_scaled_mean": 1.0000000000000004,
+      "reset_scaled_mean": 0.5000000000000002,
+      "finite_entropy_game_value_bits": 6.858589220325657,
+      "oscillator_benchmark_minus_game_bits": 0.8994179062690986,
+      "pointwise_quantum_correction_upper_bits": 0.0024070174114973067,
+      "pointwise_purification_error": 0.0001726385143874474,
+      "last_level_reset_probability": 1.3694117699488048e-32,
+      "last_level_input_probability": 3.956615252093495e-21,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.5,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 5,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.09156220047730998,
+            -0.41967513748975094,
+            -0.684194180334963
+          ],
+          "solution_parameters": [
+            0.10432715976462167,
+            -0.3849796198068956,
+            -0.7128492035880728
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 5
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 4.263256414560601e-14,
+      "input_linear_best_response_gap": 3.552713678800501e-15,
+      "reset_linear_best_response_gap": 9.898991348844532e-12,
+      "alpha": 1.1099635309279297,
+      "beta": 0.6804645040612658,
+      "delta": 0.49024539672981926,
+      "input_mass_at_zero": 0.006884180641200858,
+      "reset_mass_at_zero": 0.016320525081870787,
+      "input_scaled_mean": 1.0000000000000004,
+      "reset_scaled_mean": 0.5000000000000002,
+      "finite_entropy_game_value_bits": 9.240769830307388,
+      "oscillator_benchmark_minus_game_bits": 0.8972093092123501,
+      "pointwise_quantum_correction_upper_bits": 0.00019822972965368222,
+      "pointwise_purification_error": 1.1070846581934108e-05,
+      "last_level_reset_probability": 8.016093110706736e-34,
+      "last_level_input_probability": 5.776456861744618e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.5,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 4,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.10432715976462167,
+            -0.3849796198068956,
+            -0.7128492035880728
+          ],
+          "solution_parameters": [
+            0.10756103781181067,
+            -0.37609678645372824,
+            -0.7204776109454272
+          ],
+          "solver_success": true,
+          "residual_max": 8.881784197001252e-16,
+          "nfev": 4
+        }
+      ],
+      "constraint_residual_max": 8.881784197001252e-16,
+      "kkt_shape_residual": 3.197442310920451e-14,
+      "input_linear_best_response_gap": 2.1316282072803006e-14,
+      "reset_linear_best_response_gap": -1.4868245523658175e-12,
+      "alpha": 1.1135588278664084,
+      "beta": 0.6865358824531747,
+      "delta": 0.486519833263044,
+      "input_mass_at_zero": 0.0017270022913823712,
+      "reset_mass_at_zero": 0.004133922628306114,
+      "input_scaled_mean": 1.0,
+      "reset_scaled_mean": 0.4999999999999998,
+      "finite_entropy_game_value_bits": 11.636288636634214,
+      "oscillator_benchmark_minus_game_bits": 0.8966349710682522,
+      "pointwise_quantum_correction_upper_bits": 1.5248625886057033e-05,
+      "pointwise_purification_error": 6.964029323097089e-07,
+      "last_level_reset_probability": 1.3752410749803816e-34,
+      "last_level_input_probability": 1.2587232962933714e-22,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 8,
+      "c": 0.8,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 7,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            -1.3862943611198906,
+            -0.4462871026284193
+          ],
+          "solution_parameters": [
+            -0.019933848330271575,
+            -1.9621413395414729,
+            -0.2284294186424315
+          ],
+          "solver_success": true,
+          "residual_max": 2.220446049250313e-16,
+          "nfev": 7
+        }
+      ],
+      "constraint_residual_max": 2.220446049250313e-16,
+      "kkt_shape_residual": 2.3092638912203256e-14,
+      "input_linear_best_response_gap": 8.881784197001252e-16,
+      "reset_linear_best_response_gap": -2.519651154386793e-13,
+      "alpha": 0.9802635172304034,
+      "beta": 0.1405571179257175,
+      "delta": 0.795782462628887,
+      "input_mass_at_zero": 0.11020271633714608,
+      "reset_mass_at_zero": 0.1359213576327279,
+      "input_scaled_mean": 0.9999999999999998,
+      "reset_scaled_mean": 0.8,
+      "finite_entropy_game_value_bits": 4.471636270146448,
+      "oscillator_benchmark_minus_game_bits": 0.9635537454305254,
+      "pointwise_quantum_correction_upper_bits": 0.021665997834144114,
+      "pointwise_purification_error": 0.0020954117323578303,
+      "last_level_reset_probability": 3.409491520924634e-21,
+      "last_level_input_probability": 1.3906577249159957e-18,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.8,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 5,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.019933848330271575,
+            -1.9621413395414729,
+            -0.2284294186424315
+          ],
+          "solution_parameters": [
+            0.025909439898731474,
+            -1.8627575188828638,
+            -0.2443532603949621
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 5
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 2.842170943040401e-14,
+      "input_linear_best_response_gap": 8.881784197001252e-16,
+      "reset_linear_best_response_gap": 1.1244477571281664e-13,
+      "alpha": 1.026248007141664,
+      "beta": 0.15524395146693096,
+      "delta": 0.7832109079928284,
+      "input_mass_at_zero": 0.03000047087072186,
+      "reset_mass_at_zero": 0.03786382797460508,
+      "input_scaled_mean": 1.0000000000000002,
+      "reset_scaled_mean": 0.7999999999999996,
+      "finite_entropy_game_value_bits": 6.795192380352383,
+      "oscillator_benchmark_minus_game_bits": 0.9628147462423726,
+      "pointwise_quantum_correction_upper_bits": 0.0020500450526326117,
+      "pointwise_purification_error": 0.00014436327512356244,
+      "last_level_reset_probability": 8.341263034208159e-23,
+      "last_level_input_probability": 6.049916616152351e-20,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.8,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 4,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.025909439898731474,
+            -1.8627575188828638,
+            -0.2443532603949621
+          ],
+          "solution_parameters": [
+            0.037935729304887186,
+            -1.836275965945393,
+            -0.24891580753372186
+          ],
+          "solver_success": true,
+          "residual_max": 8.881784197001252e-16,
+          "nfev": 4
+        }
+      ],
+      "constraint_residual_max": 8.881784197001252e-16,
+      "kkt_shape_residual": 2.220446049250313e-14,
+      "input_linear_best_response_gap": -1.7763568394002505e-15,
+      "reset_linear_best_response_gap": -5.966763541587206e-13,
+      "alpha": 1.0386644750454344,
+      "beta": 0.15940997025269216,
+      "delta": 0.7796456109083745,
+      "input_mass_at_zero": 0.0076703021139060195,
+      "reset_mass_at_zero": 0.00974460902035121,
+      "input_scaled_mean": 1.0000000000000002,
+      "reset_scaled_mean": 0.7999999999999995,
+      "finite_entropy_game_value_bits": 9.175372875823584,
+      "oscillator_benchmark_minus_game_bits": 0.9626062636961539,
+      "pointwise_quantum_correction_upper_bits": 0.00016802299900467075,
+      "pointwise_purification_error": 9.249914243036906e-06,
+      "last_level_reset_probability": 1.1041315775636856e-23,
+      "last_level_input_probability": 9.428036075092555e-21,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.8,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 4,
+      "attempts": [
+        {
+          "initial_parameters": [
+            0.037935729304887186,
+            -1.836275965945393,
+            -0.24891580753372186
+          ],
+          "solution_parameters": [
+            0.04098032690991666,
+            -1.8295436936442997,
+            -0.25009844022924566
+          ],
+          "solver_success": true,
+          "residual_max": 8.881784197001252e-16,
+          "nfev": 4
+        }
+      ],
+      "constraint_residual_max": 8.881784197001252e-16,
+      "kkt_shape_residual": 2.930988785010413e-14,
+      "input_linear_best_response_gap": 1.9539925233402755e-14,
+      "reset_linear_best_response_gap": -6.834767127261721e-13,
+      "alpha": 1.0418316092967665,
+      "beta": 0.16048678220852441,
+      "delta": 0.778724121517135,
+      "input_mass_at_zero": 0.0019285093317878976,
+      "reset_mass_at_zero": 0.002454217957982243,
+      "input_scaled_mean": 0.9999999999999993,
+      "reset_scaled_mean": 0.7999999999999993,
+      "finite_entropy_game_value_bits": 11.570371149900398,
+      "oscillator_benchmark_minus_game_bits": 0.9625524578020688,
+      "pointwise_quantum_correction_upper_bits": 1.2889010195984168e-05,
+      "pointwise_purification_error": 5.817441202303308e-07,
+      "last_level_reset_probability": 2.3456760197384893e-24,
+      "last_level_input_probability": 2.0892401814075652e-21,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 8,
+      "c": 0.99,
+      "xmax": 40,
+      "dimension": 321,
+      "solver_success": true,
+      "nfev": 8,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.2231435513142097,
+            -3.912023005428146,
+            -0.02010067170700291
+          ],
+          "solution_parameters": [
+            -0.0575774807615818,
+            -5.220539526370432,
+            -0.09329561122762599
+          ],
+          "solver_success": true,
+          "residual_max": 2.220446049250313e-16,
+          "nfev": 8
+        }
+      ],
+      "constraint_residual_max": 2.220446049250313e-16,
+      "kkt_shape_residual": 2.1316282072803006e-14,
+      "input_linear_best_response_gap": -4.440892098500626e-16,
+      "reset_linear_best_response_gap": -6.823678788355804e-15,
+      "alpha": 0.9440487419371644,
+      "beta": 0.005404412516648334,
+      "delta": 0.9109241810757671,
+      "input_mass_at_zero": 0.11110933327466851,
+      "reset_mass_at_zero": 0.11210938195728519,
+      "input_scaled_mean": 1.0000000000000002,
+      "reset_scaled_mean": 0.9900000000000002,
+      "finite_entropy_game_value_bits": 4.464254946325122,
+      "oscillator_benchmark_minus_game_bits": 0.9709350692518512,
+      "pointwise_quantum_correction_upper_bits": 0.019506012106874207,
+      "pointwise_purification_error": 0.0018549282672150392,
+      "last_level_reset_probability": 3.3827038131196093e-18,
+      "last_level_input_probability": 4.705778963305511e-18,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 32,
+      "c": 0.99,
+      "xmax": 40,
+      "dimension": 1281,
+      "solver_success": true,
+      "nfev": 5,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.0575774807615818,
+            -5.220539526370432,
+            -0.09329561122762599
+          ],
+          "solution_parameters": [
+            -0.013449979803631593,
+            -5.132961252954477,
+            -0.09383497452660779
+          ],
+          "solver_success": true,
+          "residual_max": 4.440892098500626e-16,
+          "nfev": 5
+        }
+      ],
+      "constraint_residual_max": 4.440892098500626e-16,
+      "kkt_shape_residual": 2.842170943040401e-14,
+      "input_linear_best_response_gap": 0.0,
+      "reset_linear_best_response_gap": 1.3826440670551901e-15,
+      "alpha": 0.9866400670133535,
+      "beta": 0.005899065957127386,
+      "delta": 0.9104329944802587,
+      "input_mass_at_zero": 0.03030245261786481,
+      "reset_mass_at_zero": 0.03060032713161738,
+      "input_scaled_mean": 1.0000000000000002,
+      "reset_scaled_mean": 0.9899999999999999,
+      "finite_entropy_game_value_bits": 6.7870734751305974,
+      "oscillator_benchmark_minus_game_bits": 0.9709336514641578,
+      "pointwise_quantum_correction_upper_bits": 0.0018276763583291687,
+      "pointwise_purification_error": 0.0001270555902303961,
+      "last_level_reset_probability": 1.639897147380366e-19,
+      "last_level_input_probability": 2.347053718586795e-19,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 128,
+      "c": 0.99,
+      "xmax": 40,
+      "dimension": 5121,
+      "solver_success": true,
+      "nfev": 4,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.013449979803631593,
+            -5.132961252954477,
+            -0.09383497452660779
+          ],
+          "solution_parameters": [
+            -0.0018954617120222482,
+            -5.109813465270101,
+            -0.09398565569620736
+          ],
+          "solver_success": true,
+          "residual_max": 1.7763568394002505e-15,
+          "nfev": 4
+        }
+      ],
+      "constraint_residual_max": 1.7763568394002505e-15,
+      "kkt_shape_residual": 2.842170943040401e-14,
+      "input_linear_best_response_gap": -1.7763568394002505e-15,
+      "reset_linear_best_response_gap": 6.169947229994407e-14,
+      "alpha": 0.9981063335410717,
+      "beta": 0.006037208967717273,
+      "delta": 0.9102958197068957,
+      "input_mass_at_zero": 0.007751783202037971,
+      "reset_mass_at_zero": 0.007829780586214356,
+      "input_scaled_mean": 1.0000000000000013,
+      "reset_scaled_mean": 0.9899999999999988,
+      "finite_entropy_game_value_bits": 9.167045883908864,
+      "oscillator_benchmark_minus_game_bits": 0.9709332556108734,
+      "pointwise_quantum_correction_upper_bits": 0.00014917130011252733,
+      "pointwise_purification_error": 8.128678211981856e-06,
+      "last_level_reset_probability": 2.6344377543799435e-20,
+      "last_level_input_probability": 3.8003217394474566e-20,
+      "passed_numerical_checks": true
+    },
+    {
+      "E": 512,
+      "c": 0.99,
+      "xmax": 40,
+      "dimension": 20481,
+      "solver_success": true,
+      "nfev": 4,
+      "attempts": [
+        {
+          "initial_parameters": [
+            -0.0018954617120222482,
+            -5.109813465270101,
+            -0.09398565569620736
+          ],
+          "solution_parameters": [
+            0.0010282094800219382,
+            -5.103941816006267,
+            -0.09402443884985516
+          ],
+          "solver_success": true,
+          "residual_max": 1.2212453270876722e-15,
+          "nfev": 4
+        }
+      ],
+      "constraint_residual_max": 1.2212453270876722e-15,
+      "kkt_shape_residual": 3.552713678800501e-14,
+      "input_linear_best_response_gap": 8.881784197001252e-15,
+      "reset_linear_best_response_gap": 9.011719051110062e-16,
+      "alpha": 1.001028738268609,
+      "beta": 0.006072761615503799,
+      "delta": 0.9102605162488492,
+      "input_mass_at_zero": 0.0019492783571119022,
+      "reset_mass_at_zero": 0.0019690080486805374,
+      "input_scaled_mean": 1.0000000000000004,
+      "reset_scaled_mean": 0.9899999999999988,
+      "finite_entropy_game_value_bits": 11.561990453962101,
+      "oscillator_benchmark_minus_game_bits": 0.9709331537403649,
+      "pointwise_quantum_correction_upper_bits": 1.1417896337501527e-05,
+      "pointwise_purification_error": 5.110330508217537e-07,
+      "last_level_reset_probability": 5.8837832727382364e-21,
+      "last_level_input_probability": 8.5049042788324e-21,
+      "passed_numerical_checks": true
+    }
+  ],
+  "all_numerical_checks_passed": true,
+  "elapsed_seconds": 3.9726006984710693
+}

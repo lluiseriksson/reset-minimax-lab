@@ -1,0 +1,35 @@
+{
+  "scope": "Original scientific code and historical outputs; not a theorem certificate",
+  "files": [
+    {
+      "path": "continuum-results51.json",
+      "sha256": "2eb3af5b01b363c012657033e1a9acf13cb092e9bd387cab3352caa6ffd7f62f",
+      "bytes": 11587
+    },
+    {
+      "path": "continuum_check51.py",
+      "sha256": "656dc8c60bf365f6d9e30d8879dff3bcb378b763b3f17e56d87e09e6b66e3e77",
+      "bytes": 3342
+    },
+    {
+      "path": "finite-game-results50-initial.json",
+      "sha256": "ab2bcddfe1f54abc1ea0b8fd115c2d3c0bf6cd43c655d152422014b38d3d458f",
+      "bytes": 27528
+    },
+    {
+      "path": "finite-game-results50.json",
+      "sha256": "9e5e7a295622ad4d2bc8dce7d62bee9b72af5e15030c66eedc33e73f2dd8f15a",
+      "bytes": 43820
+    },
+    {
+      "path": "finite_game50-initial.py",
+      "sha256": "8f4a3ab5cba44224ae3970d7598978c4062c98ddd1f3dc6e08158ce25f64ab32",
+      "bytes": 4230
+    },
+    {
+      "path": "finite_game50.py",
+      "sha256": "65d7cba4093ecb8274e9cc1820175deca5c3e6a6234947b5cb845ec1837cded3",
+      "bytes": 5402
+    }
+  ]
+}
