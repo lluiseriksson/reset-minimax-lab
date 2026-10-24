@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "algorithm": "SHA256",
+  "input_hash_verified": true,
+  "files": [
+    {
+      "file": "audit-report.txt",
+      "bytes": 8854,
+      "sha256": "e523fa688da1c58e6d436f8b4bd36a7cd11f24f0a69db20d3984cd9a6c525513"
+    },
+    {
+      "file": "execution-notes.txt",
+      "bytes": 649,
+      "sha256": "8bcc3abf777c303eb126f3cefad0c4735f6a8ee4aca26dfad397810cc3197b2b"
+    },
+    {
+      "file": "purity-bound67-candidate.txt",
+      "bytes": 2337,
+      "sha256": "79738cb65a42c4c673f07e2716df7f7354f86cf14cc1517c2829de718e4fe070"
+    },
+    {
+      "file": "verdict.json",
+      "bytes": 2889,
+      "sha256": "7bfd3e6adde77da944d7d79401075241ab17ad6be016d90ad45d85e027207d45"
+    }
+  ],
+  "exclusions": [
+    "SHA256SUMS.json",
+    "archive-verification.json"
+  ]
+}

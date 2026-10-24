@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-24",
+  "audit_type": "separate_dependent_targeted_ai_mathematical_audit",
+  "overall_verdict": "correct_under_stated_intended_physical_domain",
+  "blocking_mathematical_findings": [],
+  "purity_bound_P": {
+    "verdict": "pass",
+    "domain": "n,d positive integers; fixed normalized pure psi; density matrix tau; 0<=q<=1/(2n)",
+    "key_chain": "Tr(rho^2)<=1-2p(1-p)(1-f); e>=(1-Tr(rho^2))/2; 0<=aq(1-q)^(2n-1)<=e<=nq<=1/2",
+    "substantive_gap_found": false
+  },
+  "explicit_neighborhood": {
+    "verdict": "pass",
+    "additional_assumption": "Delta>0",
+    "q0": "min(1/(2n), Delta/(4n^2), exp(-2n*(ln(n)+S(tau)+1)/Delta))",
+    "conclusion": "G(q)>=0 for every 0<=q<=q0",
+    "substantive_gap_found": false
+  },
+  "input": {
+    "path": "C:\\Trabajo\\airr\\2026-10-24_propuesta42a\\purity-bound67-candidate.txt",
+    "snapshot": "purity-bound67-candidate.txt",
+    "sha256": "79738cb65a42c4c673f07e2716df7f7354f86cf14cc1517c2829de718e4fe070"
+  },
+  "definition_context": {
+    "definition": "G(q)=S(R_q^tensor_n(psi))-n*(q*S(tau)+h(q))+sum_i h(q*Tr(tau*psi_i))",
+    "source": "small-noise-lemma66.txt",
+    "source_sha256": "9e3b836f222936aa5646da007d442e22fa24e38c6bd8ef7fd751b97066b9bd6c",
+    "prior_audit_reopened_or_modified": false
+  },
+  "checked_details": [
+    "0<=Delta<=a<=n without commutation assumptions",
+    "normalized nonempty-branch mixture and its purity",
+    "directions of both inequalities between e and purity",
+    "nonnegative omitted replacement-branch contributions",
+    "valid range for increasing binary entropy",
+    "q=0, q=1/(2n), q=q0, and e=0 endpoints",
+    "zero and unit overlaps and rank-deficient tau",
+    "positive logarithm and positive lower coefficient in the explicit bound",
+    "discarded positive +2n^2*q^2*ln(n) term",
+    "discarded nonpositive q*sum_i(t_i*ln(t_i)) term",
+    "Delta>0 restriction and mathematical positivity of q0"
+  ],
+  "nonblocking_clarifications": [
+    "Write 0<=q<=1/(2n), retaining the physical channel domain.",
+    "State n,d are positive integers and entropy endpoint conventions.",
+    "Show 0<=Delta<=a<=n and the e=0 case explicitly.",
+    "Explain the signs of the two discarded terms.",
+    "Do not evaluate the q0 formula at Delta=0."
+  ],
+  "limitations": {
+    "independent_human_review": false,
+    "formal_verification": false,
+    "originality_evaluated": false,
+    "score_provided": false,
+    "general_all_q_entangled_conjecture_proved": false,
+    "capacity_consequence_established": false,
+    "uniform_neighborhood_over_varying_parameters_established": false,
+    "parent_numeric_campaign_reproduced": false,
+    "new_numeric_campaign_performed": false
+  },
+  "tool_failures": [],
+  "cleanup_attempted": false,
+  "full_report": "audit-report.txt",
+  "durable_archive": "D:\\Proyectos\\airr-investigacion\\2026-10-24_purity67-audit"
+}

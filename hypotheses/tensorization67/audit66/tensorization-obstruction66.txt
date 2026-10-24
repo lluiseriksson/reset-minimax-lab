@@ -1,0 +1,96 @@
+Research checkpoint 66 — 2026-10-24
+Status: unproved conjecture; no manuscript, novelty, capacity, or grade claim.
+
+All entropies below use natural logarithms. Let q=1-lambda, with
+R_tau(rho)=lambda rho+q tau Tr rho. For pure psi on n copies, the conjecture is
+
+ S(R_tau^tensor n(psi)) >= n[q S(tau)+h(lambda)]
+                          - sum_i h(q Tr(psi_i tau)).                (C)
+
+Exact reformulation, not a proof of (C)
+------------------------------------
+Introduce independent classical retention flags J_i with Pr(J_i=1)=lambda.
+For retained set T, the conditional channel output is psi_T on T tensored
+with tau on each of the other n-|T| systems. Thus its entropy is
+S(psi_T)+(n-|T|)S(tau). The classical-quantum joint entropy identity gives
+
+ S(B^n)=n h(lambda)+n q S(tau)+E_T S(psi_T)-H(J^n|B^n).             (1)
+
+Here H(J^n|B^n) is the conditional entropy of the cq flag/output state;
+the unflagged output alone does not supply the flags to a decoder.
+Consequently (C) is equivalent, for these inputs, to
+
+ H(J^n|B^n) <= E_T S(psi_T)+sum_i h(q Tr(psi_i tau)).              (2)
+
+Equation (2) isolates the missing step: branch ambiguity has to be controlled
+jointly, allowing entanglement entropy of retained subsets. Neither ordinary
+subadditivity of output entropy nor a reverse data processing inequality
+establishes it.
+
+Established restricted case
+--------------------------
+For n=1 and pure input phi, measure the output with {phi,I-phi}; guess
+retention on the first outcome and replacement on the second. The binary
+decision error has probability e=q Tr(phi tau). Data processing followed
+by the binary Fano inequality gives H(J|B)<=H(J|Y)<=h(e). Substitution
+into (1), with S(phi)=0, proves (C) for one use. For product pure inputs,
+output entropy and every term of (C) add, so this also proves that restricted
+case for any n. These are applications of known facts, not a new theorem.
+
+For fixed n, if (C) were proved for all pure inputs, it would extend to all
+mixed inputs by concavity of S(channel(rho)) and convexity of the proposed
+right side as a function of rho. This does not prove the pure entangled case.
+
+Rejected local induction
+------------------------
+The stronger proposed conditional step
+
+ S(R_tau(rho_AR)|R) >= lambda S(A|R)+q S(tau)+h(lambda)
+                      -h(q Tr(rho_A tau))
+
+is false. Already for trivial R, rho=tau=I_2/2 and lambda=q=1/2, its left
+side is ln 2 while its right side is ln 2+h(1/2)-h(1/4)>ln 2.
+The strict excess is about 0.130812035941137 nats. This invalidates this
+proof route; it is not a counterexample to (C), which lacks lambda S(rho).
+
+Numerical evidence, limited scope
+---------------------------------
+entropy-falsifier66.py independently constructs the tensor channel by a sum
+over retention subsets and compares it with sequential local replacements.
+It tests 3627 structured cases (Schmidt/GHZ, W, chain-graph inputs; n<=4,
+d<=3 in the explicitly listed configurations), including rank-one and
+nonuniform resets and lambda values .001 through .999. Minimum margin:
+-4.440892098500627e-16, consistent with roundoff at equality.
+
+48 bounded L-BFGS-B searches (24 for n=2,d=2; 12 for n=2,d=3;
+12 for n=3,d=2) all returned convergence, with minimum margin
+2.3582167779908845e-11. These are local searches, not global certificates.
+The code retains final vectors, spectra, convergence diagnostics and all
+structured cases. Thirty additional random mixed-state channel crosschecks
+passed. No margin below the declared -2e-10 numerical violation threshold
+was found. No interval or arbitrary-precision guarantee is claimed.
+
+Literature scope checked this round
+----------------------------------
+Fukuda, arXiv:quant-ph/0505022v4, full HTML read, especially Lemma and
+Example a, equations (13)-(14): minimum output entropy additivity for a
+pure-state shift plus isotropic noise. This is not an overlap-sensitive
+bound for arbitrary reset spectra or an energy-constrained capacity formula.
+URL: https://arxiv.org/html/quant-ph/0505022v4
+
+Song, Wang, Tomamichel and Fang, arXiv:2609.37240v1: abstract, introduction
+and the displayed start of Lemma 3 reread this round. It treats isotropic
+depolarizing outputs; no general-reset extension is inferred. Earlier
+checkpoint61 separately records the specific selected sections then read.
+URL: https://arxiv.org/html/2609.37240v1
+
+Searches for replacement-channel tensorization and entropy-gain variants
+did not identify a proof of (2) in the returned primary material. This is
+not an exhaustive literature search or a certification that (C) is new.
+
+Next scientific decision
+------------------------
+Study (2) directly or seek a counterexample in larger entangled blocks with
+highly nonuniform reset spectra. Until a proof is found and audited, the
+regularized-capacity extension remains conditional and is not promoted into
+the current manuscript. No score has been requested for this conjecture.

@@ -38,13 +38,16 @@ The root-authored `input*.md` sketches are included because the native scripts r
 
 ## Unproved tensorization hypothesis
 
-`hypotheses/tensorization66/` preserves a conjectured overlap-sensitive output-entropy bound and an explicit counterexample to one proposed induction step. The complete conjecture is **unproved**. The candidate pointwise small-noise lemma is a separate analytical argument awaiting targeted audit; it is not a uniform-in-blocklength result.
+`hypotheses/tensorization66/` preserves a conjectured overlap-sensitive output-entropy bound and an explicit counterexample to one proposed induction step. The complete conjecture is **unproved**. The separate pointwise small-noise lemma and an explicit sufficient neighborhood have passed dependent targeted Astra xhigh audits, preserved with their exact inputs under `hypotheses/tensorization67/`. These are not independent human or formal reviews, originality assessments, or uniform-in-blocklength results.
 
 ```powershell
 python verify_tensorization.py
+python verify_followup.py
 ```
 
 This optional replay runs 3627 structured finite cases, 48 bounded local optimizations, 30 comparisons of two channel implementations, 12 small-noise diagnostics and 14 orthogonal-support controls. It copies the native programs to a fresh ignored `runs/` directory and verifies immutable source/output hashes. The preserved execution found no numerical violation below -2e-10; a local optimizer cannot certify a global minimum. Neither these tests nor a targeted lemma audit establish the full conjecture, regularized capacity, originality, or a manuscript score. Inputs are not restricted by the energy constraints of the main finite-game experiment; this is a separate channel-entropy exploration.
+
+The follow-up replay checks the explicit small-noise bound on1418 preserved eligible cases and tests weighted GHZ inputs with permuted local bases on2880 larger cases (up to8 uses), plus36 local optimizations and32 comparisons against a full channel calculation. The diagonal-plus-rank-one reduction is specific to that GHZ family; arbitrary inputs or basis rotations are not covered. Original outcomes, all optimizer flags and the restricted scope remain visible. The two analytical audits support only the written partial lemmas; no manuscript score or full tensorization/capacity result follows.
 
 ## Optional oscillator larger checks
 

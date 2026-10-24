@@ -1,0 +1,22 @@
+Own unsuccessful tool actions are retained here rather than hidden.
+
+1. External reference lookup: https://arxiv.org/html/2211.15539v2
+   web tool returned HTTP 404. No claim based on that nonexistent HTML version.
+   Recovery: read https://arxiv.org/pdf/2211.15539 (v1) successfully.
+
+2. External reference lookup: AMS PDF URL for Grater and Klein (1999/2000).
+   web tool reported URL not accessible. No full-text-read claim for that source.
+
+3. Optional instruction discovery command also checked nonexistent parent
+   AGENTS.md files with -ErrorAction SilentlyContinue, producing exit code 1.
+   Python itself ran successfully and reported C:\Python312\python.exe,
+   NumPy 2.2.6. The supplied global instructions and D:\LEEME.md were read.
+
+Any subsequent Python execution exception is appended below by audit66.py.
+
+4. Final temporary-directory cleanup was rejected before execution by the
+   automatic execution policy. The intended action was Remove-Item of only
+   C:\Trabajo\airr\2026-10-24_small-noise66-audit after exact-path,
+   no-reparse-point and archive-hash checks. The only reason returned was
+   "blocked by policy". No bypass was attempted. The complete archive was
+   already copied and verified in D:. The temporary C: folder remains.

@@ -1,0 +1,67 @@
+Research bridge checkpoint67-69, 2026-10-24
+No manuscript, originality certification, general tensorization theorem or score.
+
+Verified partial result
+The exact purity-bound67 candidate was audited separately by Astra xhigh.
+Root read the full report; the hashed manifest must be verified at checkpoint.
+The finite-tuple explicit q0 result retains its n/Delta dependence. It cannot
+be passed to arbitrary blocklength at a fixed nonzero noise level.
+
+Larger-block falsifier
+ghz-falsifier68.py uses the exact diagonal-plus-rank-one structure of weighted
+GHZ code words with permuted local computational bases and diagonal reset.
+After at least one replacement, tracing a GHZ site removes all coherences.
+The only off-diagonal contribution is the no-replacement branch. A d by d
+block therefore supplies its nontrivial eigenvalues; all remaining eigenvalues
+are scalar diagonal entries. Thirty-two small cases compare this reduction
+against the independent full channel construction, including entropy values.
+The larger campaign covers n,d=(4,3),(5,3),(6,2),(4,4),(8,2),(5,4), 480 cases
+each, plus6 local parameter optimizations in each configuration.
+Results:2880 cases,36 converged optimizations,no margin below -2e-10;
+minimum -4.951594689828198e-14 is within roundoff tolerance.
+This excludes neither arbitrary basis rotations nor arbitrary entangled inputs.
+
+Primary literature and missing dictionaries
+1. Bao,Dong,Ou,Yao, Hypercontractivity for quantum erasure channels via variable
+multipartite log-Sobolev inequality.
+https://ir.cwi.nl/pub/35176/35176.pdf
+Repository publication metadata2025-07-01; the downloaded web-tool PDF header
+is January21,2026. Read abstract/introduction/results through the displayed
+start of Theorem1.8 (PDF pp1-8); proofs not read. The random-partial-trace norm
+bound concerns a weighted flagged erasure output. Our entropy problem removes
+the flags and replaces erased systems by a generally overlapping tau. Ordinary
+data processing does not preserve the needed entropy lower bound in that
+direction. A valid weighted-norm or cq flag-ambiguity dictionary is missing.
+No transfer theorem is claimed.
+
+2. Amosov, arXiv:1409.5881v2.
+https://arxiv.org/abs/1409.5881
+Read abstract/metadata; HTML retrieved but body not mathematically read.
+Results advertised for dephasing plus an arbitrary channel do not establish a
+reset result without a correct channel decomposition. No bridge claimed.
+
+3. OpenAI, The entropy photon-number inequality, September24,2026.
+https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-entropy-photon-number-inequality-September-24-2026/paper.pdf
+Pinned PDF sha256 d826f8ebe18596419871100e79611868dff2a45a4aa157433c58e6f49a234d82.
+Downloaded32 pages; extracted all pages mechanically. Actual reading this round:
+abstract/introduction through displayed start of p5, and pp8-9, including
+Theorem3.1 and parallel-sum preservation. The nonlinear entropy bound is for
+passive bosonic mixing, not a reset mixture. Four diagonal-form comparisons
+would need to be established in an appropriate reset problem before using
+the interpolation theorem. They have not been established.
+
+An exploratory scalar-target linear-program test of Theorem3.1 covered2400
+finite parameter configurations.2391 solver runs returned success,9 failed;
+all failures and parameters are retained. Candidates were rescaled to satisfy
+the original unscaled four constraints before checking the fifth. Maximum
+ratio0.9999999999997999; no candidate above1+2e-7. This is neither a proof
+of that theorem nor an audit of the EPnI preprint. Web raw-PDF parsing failed
+with unsupported application/octet-stream; the pinned raw file was then
+downloaded and hashed locally. No inaccessible text is claimed to be read.
+
+Next substantial obstacle
+The current full conjecture is equivalent to a joint conditional-entropy bound
+on hidden reset flags. All-noise, uniform-in-blocklength control remains open
+within this project. The audited small-noise lemmas do not remove it. A new
+paper claiming regularized capacity would be premature. No score is sought for
+these restricted claims, and no reviewer has assessed them as a full paper.

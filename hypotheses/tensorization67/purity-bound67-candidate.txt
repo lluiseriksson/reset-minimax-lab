@@ -1,0 +1,52 @@
+Future separate audit candidate — NOT covered by audit66
+2026-10-24. Fixed finite-dimensional n,d, pure input psi, reset tau.
+R_q=(1-q)id+q replacement_tau. All entropies natural. No novelty claim.
+
+Notation: t_i=Tr(tau psi_i), a=sum_i[1-Tr(tau psi_i^2)],
+Delta=a-n+sum_i t_i=sum_i Tr[tau(psi_i-psi_i^2)]>=0.
+
+Candidate nonasymptotic bound, when n q<=1/2:
+ S(R_q^tensor n(psi)) >= h(a q (1-q)^(2n-1)).                      (P)
+
+Derivation to check
+Let rho=R_q^tensor n(psi), p=1-(1-q)^n. For q>0 decompose
+rho=(1-p)psi+p sigma, where sigma is the normalized mixture of all
+nonempty-replacement branches. Set f=<psi|sigma|psi> (psi denotes its vector
+inside this expectation). Since Tr sigma^2<=1,
+ Tr rho^2 <= 1-2p(1-p)(1-f).
+With e=1-lambda_max(rho), the elementary inequalities
+ e >= (1-lambda_max(rho)^2)/2 >= (1-Tr rho^2)/2
+give e >= p(1-p)(1-f)=(1-p)(1-<psi|rho|psi>).
+The single-replacement branches alone have total contribution
+ q(1-q)^(n-1) sum_i[1-<psi|E_i(psi)|psi>]
+ =q(1-q)^(n-1) a
+to 1-<psi|rho|psi>; every omitted branch contribution is nonnegative.
+Hence e>= a q(1-q)^(2n-1).
+Also lambda_max(rho)>=<psi|rho|psi>>=(1-q)^n, so e<=p<=nq<=1/2.
+For any density matrix, S(rho)>=h(e) by grouping all but its largest
+eigenvalue. On [0,1/2], h is increasing. This establishes (P) if all
+preceding algebra and endpoint conventions survive audit.
+
+Candidate explicit sufficient neighborhood for the tensorization conjecture
+When Delta>0, define
+
+ q_0=min{1/(2n), Delta/(4n^2),
+         exp[-2n(ln n+S(tau)+1)/Delta]}.
+
+Proposed consequence: G(q)>=0 for 0<=q<=q_0, using the G of lemma66.
+For 0<q<=q_0, Bernoulli gives
+ e>=a q(1-q)^(2n-1)>=a q-2n^2 q^2.
+As e<=nq, S(rho)>=e ln(1/e)>=(a q-2n^2 q^2)ln(1/(nq)).
+The proposed RHS of the entropy conjecture satisfies, with h(q)<=q ln(1/q)+q
+and h(qt)>=qt ln(1/(qt)),
+ n[q S(tau)+h(q)]-sum h(qt_i)
+ <=(n-sum t_i)q ln(1/q)+nq[S(tau)+1],
+where sum t_i ln(t_i)<=0 was discarded. Thus
+
+ G(q)>=q[Delta ln(1/q)-a ln n-2n^2 q ln(1/q)-n(S(tau)+1)]
+     >=q[(Delta/2)ln(1/q)-n ln n-n(S(tau)+1)]>=0.
+
+This is an elementary candidate proof with an explicit fixed-tuple bound,
+not a uniform-in-n/noise/dimension capacity result. It has NOT yet been
+audited or promoted into any manuscript. The zero-Delta case is handled
+separately by the support-splitting argument in lemma66; do not divide by it.

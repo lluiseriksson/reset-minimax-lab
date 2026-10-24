@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-24",
+  "audit_type": "dependent_targeted_ai_mathematical_audit",
+  "overall_verdict": "correct_as_stated_under_fixed_finite_dimensional_assumptions",
+  "blocking_mathematical_findings": [],
+  "claim_A": {
+    "verdict": "pass",
+    "reason": "Analytic Hermitian perturbation applies to the polynomial output; compressed derivative gives the correct entropy coefficient. An independent total-small-eigenvalue-mass proof also establishes the expansion.",
+    "substantive_gap_found": false
+  },
+  "claim_B": {
+    "verdict": "pass",
+    "reason": "Zero trace of two positive factors forces support inclusion; after pure-site factorization all retained/replaced branch supports on the mixed-marginal block are orthogonal. The pure factors satisfy the binary-error bound even above error probability one half.",
+    "substantive_gap_found": false
+  },
+  "corollary": {
+    "verdict": "pass",
+    "scope": "For each fixed finite tuple (n,d,psi,tau), some q0>0 works. No uniform q0 is established.",
+    "substantive_gap_found": false
+  },
+  "input_files": [
+    {
+      "path": "C:\\Trabajo\\airr\\2026-10-24_propuesta42a\\small-noise-lemma66.txt",
+      "snapshot": "small-noise-lemma66.txt",
+      "sha256": "9e3b836f222936aa5646da007d442e22fa24e38c6bd8ef7fd751b97066b9bd6c"
+    },
+    {
+      "path": "C:\\Trabajo\\airr\\2026-10-24_propuesta42a\\tensorization-obstruction66.txt",
+      "snapshot": "tensorization-obstruction66.txt",
+      "sha256": "40fb1662e5e67f224def0eb884e07233d9b3441e37fb28022f5e29486c3cdc0c"
+    }
+  ],
+  "numerical_evidence": {
+    "script": "audit66.py",
+    "result_file": "numeric-evidence.json",
+    "seed": 660024,
+    "tuples": 50,
+    "channel_evaluations": 700,
+    "delta_zero_controls": 9,
+    "failure_count": 0,
+    "tolerance": 2e-10,
+    "maximum_channel_error": 2.220446049250313e-16,
+    "minimum_delta_zero_margin": -1.0193354865738837e-14,
+    "proof_certificate": false,
+    "interval_arithmetic": false,
+    "candidate_test_scripts_read_or_reused": false
+  },
+  "nonblocking_clarifications": [
+    "Specify entropy endpoint and empty-subsystem conventions.",
+    "State the real Hermitian polynomial extension used by perturbation theory.",
+    "Expand the zero-trace support implication and retained-support inclusion.",
+    "Give the binary error-bit argument, which covers errors above one half.",
+    "Retain fixed-tuple and nonuniform scope prominently."
+  ],
+  "limitations": {
+    "independent_human_review": false,
+    "formal_verification": false,
+    "originality_evaluated": false,
+    "score_provided": false,
+    "general_all_q_entangled_conjecture_proved": false,
+    "capacity_consequence_established": false,
+    "uniform_neighborhood_established": false,
+    "candidate_large_numeric_runs_reproduced": false,
+    "candidate_literature_claims_audited": false
+  },
+  "failure_log": "execution-failures.txt",
+  "full_report": "audit-report.txt",
+  "durable_archive": "D:\\Proyectos\\airr-investigacion\\2026-10-24_small-noise66-audit"
+}
