@@ -1,0 +1,70 @@
+{
+  "scope": "Native finite scientific diagnostics and preserved failures, not theorem or novelty certificates",
+  "files": [
+    {
+      "path": "holevo56/checks56-results.json",
+      "bytes": 94333,
+      "sha256": "5487138d83a6b1b8f185c8409b8229e19a93f2a1280ca97be9fb77d786e3b2c2"
+    },
+    {
+      "path": "holevo56/checks56.py",
+      "bytes": 9127,
+      "sha256": "f1f7418a96306024c419957ec2f6b3e77265fa0161b673f53f8f4359d70068d0"
+    },
+    {
+      "path": "holevo56/failures56.json",
+      "bytes": 9609,
+      "sha256": "8893b28051fa8efe5a87d7979deb6767fc9cb60c86789ee6f3ebb984d92d05c5"
+    },
+    {
+      "path": "holevo56/input56.md",
+      "bytes": 4983,
+      "sha256": "0109593f4b8b9454706da3811043f1c4f0eb955d306d626364b5248bafff6941"
+    },
+    {
+      "path": "quartic58/checks58-results.json",
+      "bytes": 40113,
+      "sha256": "983606263d32efc14e12d197008cbdd6326753e81c6a92d1c48cecabd962a411"
+    },
+    {
+      "path": "quartic58/checks58.py",
+      "bytes": 5671,
+      "sha256": "b5fdf9e523f35020a32b5c222a9aba146a32b712d99d6469a6ba71ca73ebacc5"
+    },
+    {
+      "path": "quartic58/input58-addendum.md",
+      "bytes": 3771,
+      "sha256": "a06ebe748224c0637cbb49590ff1329f3297ae84a67ca0cba76271dfaa980800"
+    },
+    {
+      "path": "quartic58/input58.md",
+      "bytes": 3047,
+      "sha256": "9e17632b31ab2a4ddc87861eecb99a1b5d4006b9dfc3377661577946a99a04dd"
+    },
+    {
+      "path": "regular57/check57-initial.py",
+      "bytes": 6112,
+      "sha256": "55484010cf1668fa59b15581c1118626120375d57b36699b760ddf73a573c96b"
+    },
+    {
+      "path": "regular57/check57.py",
+      "bytes": 6357,
+      "sha256": "71f2c9437b5c86076d5b3ff17daac0b025938c87389630c554c98e5f3a0b31b1"
+    },
+    {
+      "path": "regular57/results/checks57-initial.json",
+      "bytes": 33140,
+      "sha256": "a2c383c1d78a0864cefe30b2f2dc19e0bfa46051ba135df264a2be369e855d40"
+    },
+    {
+      "path": "regular57/results/checks57.json",
+      "bytes": 33152,
+      "sha256": "0a21322ae9b09171ab30f59cf1b5faf4ae6542efabd90625442d0a7d2adc0711"
+    },
+    {
+      "path": "regular57/results/first-run-warning57.json",
+      "bytes": 637,
+      "sha256": "b13491ba35036836ffdac84f4f134f31693f8fc12feecbd76574aad040e6f56c"
+    }
+  ]
+}

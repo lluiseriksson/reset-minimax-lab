@@ -1,0 +1,8 @@
+{
+  "type": "diagnostic_implementation_defect",
+  "initial_files_preserved": ["check57-initial.py", "results/checks57-initial.json"],
+  "observed_warning": "RuntimeWarning: invalid value encountered in divide at direct tail ratio identity check",
+  "cause": "The truncated far tail underflowed, giving 0/0 in one ratio. Python max could mask the NaN among other finite residuals, so the first all_assertions_passed flag was insufficient.",
+  "correction": "Check both exact identities in logarithms using logaddexp and assert every component is finite before taking a maximum; rerun all cases.",
+  "mathematical_counterexample": false
+}

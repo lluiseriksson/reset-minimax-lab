@@ -1,1 +1,4 @@
 * text eol=lf
+
+# Native scientific inputs/outputs have immutable byte fingerprints.
+extensions/** -text whitespace=cr-at-eol,-blank-at-eof
