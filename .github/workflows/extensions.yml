@@ -1,5 +1,16 @@
 name: Spectral and Holevo finite diagnostics
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - 'extensions/**'
+      - 'requirements-extensions.txt'
+      - 'verify_extensions.py'
+  pull_request:
+    paths:
+      - 'extensions/**'
+      - 'requirements-extensions.txt'
+      - 'verify_extensions.py'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

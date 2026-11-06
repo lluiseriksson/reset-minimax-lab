@@ -1,5 +1,18 @@
 name: Unproved entropy hypothesis diagnostics
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - 'hypotheses/**'
+      - 'requirements.txt'
+      - 'verify_tensorization.py'
+      - 'verify_followup.py'
+  pull_request:
+    paths:
+      - 'hypotheses/**'
+      - 'requirements.txt'
+      - 'verify_tensorization.py'
+      - 'verify_followup.py'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

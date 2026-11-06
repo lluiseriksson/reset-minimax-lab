@@ -1,5 +1,24 @@
 name: Finite entropy-game replay
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - 'finite_game50.py'
+      - 'finite_game50-initial.py'
+      - 'finite-game-results50.json'
+      - 'finite-game-results50-initial.json'
+      - 'manifest.json'
+      - 'requirements.txt'
+      - 'verify.py'
+  pull_request:
+    paths:
+      - 'finite_game50.py'
+      - 'finite_game50-initial.py'
+      - 'finite-game-results50.json'
+      - 'finite-game-results50-initial.json'
+      - 'manifest.json'
+      - 'requirements.txt'
+      - 'verify.py'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

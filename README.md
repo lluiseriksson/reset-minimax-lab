@@ -56,3 +56,7 @@ The follow-up replay checks the explicit small-noise bound on1418 preserved elig
 The scientific code was developed with AI assistance. Human peer review and formal verification are not claimed. References and manuscript assessments belong to the knowledge tree; they are deliberately separate from this finite computation.
 
 Related context: https://github.com/lluiseriksson/physmath-knowledge-tree .
+
+## Optional exact certificate for one finite game
+
+The isolated [finite entropy certificate](certificates/finite_entropy/README.md) encloses the E=8, c=1/20, lambda=3/5, 321-level game value in [4.9836437909, 4.9836437910] bits using exact rational arithmetic and outward logarithm bounds. Run `python certificates/finite_entropy/verify.py --enable`. It verifies a new exactly feasible rational pair reconstructed from archived parameters; it does not certify the old floating arrays, a continuum limit, or quantum capacity. Historical scientific files and their manifests are unchanged.
